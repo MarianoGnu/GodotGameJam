@@ -18,11 +18,16 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="items.svg"
-   inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/bomb/icon"
+   inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/dash_boots/icon.png"
    inkscape:export-xdpi="14.4"
    inkscape:export-ydpi="14.4">
   <defs
      id="defs4">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Wavy"
+       id="pattern4165"
+       patternTransform="translate(78.999991,255.99997)" />
     <pattern
        inkscape:stockid="Wavy"
        id="Wavy"
@@ -97,9 +102,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="67.288817"
-     inkscape:cy="176.27479"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="-29.719925"
+     inkscape:cy="82.420183"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -236,17 +241,17 @@
     <circle
        style="opacity:1;fill:#3e316f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4153"
-       cx="368.4758"
-       cy="541.89532"
+       cx="447.4758"
+       cy="797.89532"
        r="76.714287" />
     <path
        inkscape:connector-curvature="0"
        id="path5711"
-       d="m 456.38618,434.1947 c 1,20 -4,28 -14,29.5 -10,1.5 -13,7.5 -14.5,10.5"
+       d="m 535.38617,690.19467 c 1,20 -4,28 -14,29.5 -10,1.5 -13,7.5 -14.5,10.5"
        style="fill:none;fill-rule:evenodd;stroke:#a55b00;stroke-width:9.99999905;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.68333333" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:url(#Wavy);stroke-width:9.99999881;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stroke-dashoffset:0"
-       d="m 456.38618,434.1947 c 1,20 -4,28 -14,29.5 -10,1.5 -13,7.5 -14.5,10.5"
+       style="fill:none;fill-rule:evenodd;stroke:url(#pattern4165);stroke-width:9.99999905;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 535.38617,690.19467 c 1,20 -4,28 -14,29.5 -10,1.5 -13,7.5 -14.5,10.5"
        id="path4168"
        inkscape:connector-curvature="0" />
     <rect
@@ -254,15 +259,15 @@
        id="rect4157"
        width="37"
        height="26"
-       x="610.40869"
-       y="103.10599"
+       x="830.44897"
+       y="255.94337"
        transform="matrix(0.78729342,0.61657852,-0.61657852,0.78729342,0,0)"
        inkscape:transform-center-y="-6.9999999" />
     <path
-       style="opacity:1;fill:#ffffff;fill-opacity:0.52083331;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 96.427734 49 A 66.714295 66.714295 0 0 0 29.714844 115.71484 A 66.714295 66.714295 0 0 0 33.634766 138.04297 A 74.714296 74.714296 0 0 1 32.714844 126.71484 A 74.714296 74.714296 0 0 1 107.42773 52 A 74.714296 74.714296 0 0 1 118.87305 52.976562 A 66.714295 66.714295 0 0 0 96.427734 49 z "
-       transform="translate(272.04724,426.18109)"
-       id="circle4161" />
+       style="opacity:1;fill:#ffffff;fill-opacity:0.52083333;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 447.47496,731.18106 a 66.714295,66.714295 0 0 0 -66.71289,66.71484 66.714295,66.714295 0 0 0 3.91993,22.32813 74.714296,74.714296 0 0 1 -0.91993,-11.32813 74.714296,74.714296 0 0 1 74.71289,-74.71484 74.714296,74.714296 0 0 1 11.44532,0.97656 66.714295,66.714295 0 0 0 -22.44532,-3.97656 z"
+       id="circle4161"
+       inkscape:connector-curvature="0" />
     <path
        sodipodi:type="star"
        style="opacity:1;fill:#ffb22c;fill-opacity:1;fill-rule:nonzero;stroke:#e7f000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.68333333"
@@ -291,5 +296,11 @@
        inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/bomb/explosion.png"
        inkscape:export-xdpi="14"
        inkscape:export-ydpi="14" />
+    <path
+       style="opacity:1;fill:#8080ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 378.46145,457.44373 0,57.45741 c -12.39376,0 -22.60136,0.34924 -37,0.34924 -29.27109,0 -53,22.83348 -53,51 l 0,21.59668 92.84061,0 0,-9.92942 25.0901,0 0,9.92942 46.06929,0 0,-130.40333 z"
+       id="path4167"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsscccccccc" />
   </g>
 </svg>
