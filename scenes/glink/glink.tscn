@@ -8,34 +8,33 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 2, 10 )
 
-[sub_resource type="CanvasItemShader" id=6]
+[sub_resource type="CanvasItemShader" id=3]
 
 _code = { "fragment":"COLOR = color(1,1,1,1);", "fragment_ofs":0, "light":"", "light_ofs":0, "vertex":"", "vertex_ofs":0 }
 
-[sub_resource type="CanvasItemMaterial" id=7]
+[sub_resource type="CanvasItemMaterial" id=4]
 
-shader/shader = SubResource( 6 )
+shader/shader = SubResource( 3 )
 shader/shading_mode = 0
 
-[sub_resource type="CanvasItemShader" id=8]
+[sub_resource type="CanvasItemShader" id=5]
 
 _code = { "fragment":"uniform color mask = color(1,1,1,1);\nuniform float tolerance = 0.1;\ncolor c = tex(TEXTURE,UV);\nfloat dif = length(mask - c);\nif (dif > tolerance) {\n\tCOLOR = c;\n} else {\n\tCOLOR = color(c.rgb,0);\n}", "fragment_ofs":0, "light":"", "light_ofs":0, "vertex":"", "vertex_ofs":0 }
 
-[sub_resource type="CanvasItemMaterial" id=9]
+[sub_resource type="CanvasItemMaterial" id=6]
 
-shader/shader = SubResource( 8 )
+shader/shader = SubResource( 5 )
 shader/shading_mode = 0
 shader_param/mask = Color( 0.117647, 0.101961, 0.129412, 1 )
 shader_param/tolerance = 0.197
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=7]
 
-resource/name = "attack"
 length = 0.25
 loop = false
 step = 0.05
@@ -49,17 +48,20 @@ tracks/1/path = NodePath("sword_pivot/sword/Sprite:visibility/visible")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = { "times":FloatArray( 0, 0.25 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("sword_pivot/sword/CollisionShape2D:trigger")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 0.25 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ false, true ] }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=8]
 
-resource/name = "idle"
 length = 1.0
 loop = true
 step = 0.1
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=9]
 
-resource/name = "walk"
 length = 1.0
 loop = false
 step = 0.1
@@ -88,9 +90,9 @@ _update_shape_index = 0
 
 transform/rot = -44.9999
 input/pickable = true
-shapes/0/shape = SubResource( 5 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -24 )
-shapes/0/trigger = false
+shapes/0/trigger = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
@@ -99,22 +101,22 @@ angular_damp = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sword_pivot/sword"]
 
 transform/pos = Vector2( 0, -24 )
-shape = SubResource( 5 )
-trigger = false
+shape = SubResource( 2 )
+trigger = true
 _update_shape_index = 0
 
 [node name="Sprite" type="Sprite" parent="sword_pivot/sword"]
 
 visibility/visible = false
 visibility/self_opacity = 0.0
-material/material = SubResource( 7 )
+material/material = SubResource( 4 )
 transform/pos = Vector2( 0, -24.0649 )
 transform/scale = Vector2( 0.05, 0.3 )
 texture = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
-material/material = SubResource( 9 )
+material/material = SubResource( 6 )
 transform/pos = Vector2( 0, -8 )
 transform/scale = Vector2( 0.5, 0.75 )
 texture = ExtResource( 2 )
@@ -124,9 +126,9 @@ texture = ExtResource( 2 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/attack = SubResource( 2 )
-anims/idle = SubResource( 3 )
-anims/walk = SubResource( 4 )
+anims/attack = SubResource( 7 )
+anims/idle = SubResource( 8 )
+anims/walk = SubResource( 9 )
 next/attack = "idle"
 playback/active = true
 playback/speed = 1.0

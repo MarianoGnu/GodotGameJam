@@ -27,6 +27,5 @@ __meta__ = { "_edit_lock_":true }
 [node name="glink" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 256, 256 )
-transform/scale = Vector2( 1, 1 )
 
 
