@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="56.444443mm"
+   height="56.444443mm"
+   viewBox="0 0 199.99999 199.99999"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="items.svg"
+   inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/wired_sword/icon"
+   inkscape:export-xdpi="14.4"
+   inkscape:export-ydpi="14.4">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4157"
+       inkscape:collect="always">
+      <stop
+         id="stop4159"
+         offset="0"
+         style="stop-color:#dd281d;stop-opacity:1" />
+      <stop
+         id="stop4161"
+         offset="1"
+         style="stop-color:#fc1515;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4144">
+      <stop
+         style="stop-color:#00aaff;stop-opacity:1"
+         offset="0"
+         id="stop4146" />
+      <stop
+         style="stop-color:#0094ff;stop-opacity:0"
+         offset="1"
+         id="stop4148" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4144"
+       id="linearGradient4150"
+       x1="320.93246"
+       y1="508.55481"
+       x2="329.96936"
+       y2="508.42856"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       gradientTransform="matrix(1,0,0,1.1000297,280.86885,-42.928383)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4157"
+       id="linearGradient4170"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.1000297,246.22572,-247.63997)"
+       spreadMethod="reflect"
+       x1="320.93246"
+       y1="508.55481"
+       x2="329.96936"
+       y2="508.42856" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="184.44993"
+     inkscape:cy="137.60268"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="719"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-272.04724,-426.18109)">
+    <rect
+       y="449.20746"
+       x="594.83746"
+       height="113.89777"
+       width="13.637059"
+       id="rect4142"
+       style="opacity:1;fill:url(#linearGradient4150);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.48800004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0, 1.48800004, 2.97600007, 4.46400011, 5.95200014, 7.44000018, 8.92800021, 10.41600025, 11.90400028, 13.39200032, 14.88000035, 16.36800039, 17.85600042, 19.34400046, 20.83200049;stroke-dashoffset:0;stroke-opacity:1"
+       ry="7.5005856" />
+    <rect
+       style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.48800004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0, 1.48800004, 2.97600007, 4.46400011, 5.95200014, 7.44000018, 8.92800021, 10.41600025, 11.90400028, 13.39200032, 14.88000035, 16.36800039, 17.85600042, 19.34400046, 20.83200049;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4138"
+       width="13.637059"
+       height="37.880722"
+       x="594.83746"
+       y="561.84009" />
+    <rect
+       style="opacity:1;fill:#87aade;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.48800004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0, 1.48800004, 2.97600007, 4.46400011, 5.95200014, 7.44000018, 8.92800021, 10.41600025, 11.90400028, 13.39200032, 14.88000035, 16.36800039, 17.85600042, 19.34400046, 20.83200049;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4140"
+       width="57.07362"
+       height="14.647212"
+       x="573.1192"
+       y="549.7182"
+       ry="4.2857137" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.48800004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0, 1.48800004, 2.97600007, 4.46400011, 5.95200014, 7.44000018, 8.92800021, 10.41600025, 11.90400028, 13.39200032, 14.88000035, 16.36800039, 17.85600042, 19.34400046, 20.83200049;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 693.83236,521.18089 c 0,10.46047 -7.68843,18.94036 -17.17259,18.94036 -9.48416,0 -17.1726,-8.47989 -17.1726,-18.94036"
+       id="path4152"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.48800004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0, 1.48800004, 2.97600007, 4.46400011, 5.95200014, 7.44000018, 8.92800021, 10.41600025, 11.90400028, 13.39200032, 14.88000035, 16.36800039, 17.85600042, 19.34400046, 20.83200049;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4156"
+       width="5.3571429"
+       height="22.142857"
+       x="666.71777"
+       y="503.15225"
+       ry="2.6785715" />
+    <rect
+       ry="2.6785715"
+       y="503.15225"
+       x="680.64636"
+       height="22.142857"
+       width="5.3571429"
+       id="rect4158"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.48800004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0, 1.48800004, 2.97600007, 4.46400011, 5.95200014, 7.44000018, 8.92800021, 10.41600025, 11.90400028, 13.39200032, 14.88000035, 16.36800039, 17.85600042, 19.34400046, 20.83200049;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.99999952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-opacity:1"
+       d="m 601.71776,600.29527 c -0.71429,11.07143 5.51808,23.54257 23.02214,23.54257 19.40857,0 61.44215,2.39155 61.44215,-10.68543 0,-16.1071 -20.17857,-5.47136 -20.17857,-18.69047 0,-17.15773 20.17857,-4.4003 20.17857,-18.69048 0,-12.6269 -20.17857,-8.81239 -20.17857,-18.69047 0,-8.87358 10.71428,-0.35714 10.35714,-18.92857"
+       id="path4162"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssssc" />
+    <rect
+       ry="7.5005856"
+       style="opacity:1;fill:url(#linearGradient4170);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.48800004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0, 1.48800004, 2.97600007, 4.46400011, 5.95200014, 7.44000018, 8.92800021, 10.41600025, 11.90400028, 13.39200032, 14.88000035, 16.36800039, 17.85600042, 19.34400046, 20.83200049;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4164"
+       width="13.637059"
+       height="113.89777"
+       x="560.19434"
+       y="244.49586"
+       inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/wireles_sword/sword"
+       inkscape:export-xdpi="14"
+       inkscape:export-ydpi="14" />
+    <rect
+       y="357.12845"
+       x="560.19434"
+       height="37.880722"
+       width="13.637059"
+       id="rect4166"
+       style="opacity:1;fill:#916f6f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.48800004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0, 1.48800004, 2.97600007, 4.46400011, 5.95200014, 7.44000018, 8.92800021, 10.41600025, 11.90400028, 13.39200032, 14.88000035, 16.36800039, 17.85600042, 19.34400046, 20.83200049;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/wireles_sword/sword"
+       inkscape:export-xdpi="14"
+       inkscape:export-ydpi="14" />
+    <rect
+       ry="4.2857137"
+       y="345.00656"
+       x="538.47607"
+       height="14.647212"
+       width="57.07362"
+       id="rect4168"
+       style="opacity:1;fill:#ffb380;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.48800004;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0, 1.48800004, 2.97600007, 4.46400011, 5.95200014, 7.44000018, 8.92800021, 10.41600025, 11.90400028, 13.39200032, 14.88000035, 16.36800039, 17.85600042, 19.34400046, 20.83200049;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/wireles_sword/sword"
+       inkscape:export-xdpi="14"
+       inkscape:export-ydpi="14" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4.99999952;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 628.54415,296.79 8.79226,0 2.16398,-2.46225 15.36722,0 2.16398,2.46225 8.16091,0 c 2.01662,0 3.64011,1.62349 3.64011,3.64011 l 0,87.36265 c 0,2.01662 -1.62349,3.6401 -3.64011,3.6401 l -36.64835,0 c -2.01662,0 -3.64011,-1.62348 -3.64011,-3.6401 l 0,-87.36265 c 0,-2.01662 1.62349,-3.64011 3.64011,-3.64011 z"
+       id="rect4172"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sccccssssssss" />
+    <path
+       style="opacity:1;fill:#00aa88;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.89544439;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 631.52219,301.73699 c -0.0196,0 -0.0367,0.0218 -0.0367,0.0469 l 0,19.97266 30.76451,-8.78516 0,-11.1875 c 0,-0.0251 -0.0155,-0.0469 -0.0351,-0.0469 l -30.69271,0 z m 30.72785,19.65039 -30.76451,8.78516 0,15.55078 30.76451,-8.78515 0,-15.55079 z m 0,23.9668 -30.76451,8.78516 0,14.95703 30.76451,-8.78516 0,-14.95703 z m 0,23.375 -30.76451,8.78516 0,8.92578 c 0,0.0251 0.0171,0.0449 0.0367,0.0449 l 30.69271,0 c 0.0196,0 0.0351,-0.0199 0.0351,-0.0449 l 0,-17.71094 z"
+       id="rect4174"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://scenes/items/INVENTORY.gd" type="Script" id=1]
+[ext_resource path="res://scenes/items/item.gd" type="Script" id=2]
+[ext_resource path="res://scenes/items/wired_sword/wired_sword.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/items/wired_sword/icon.png" type="Texture" id=4]
+[ext_resource path="res://scenes/items/wireless_sword/wireless_sword.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/items/wireless_sword/icon.png" type="Texture" id=6]
+
+[node name="INVENTORY" type="CanvasLayer"]
+
+process/pause_mode = 2
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+script/script = ExtResource( 1 )
+
+[node name="inventory_panel" type="Panel" parent="."]
+
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 160.0
+margin/top = 48.0
+margin/right = -144.0
+margin/bottom = -16.0
+
+[node name="container" type="HBoxContainer" parent="inventory_panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = 16.0
+margin/right = 288.0
+margin/bottom = 48.0
+custom_constants/separation = 16
+alignment = 0
+
+[node name="item_1" type="Panel" parent="inventory_panel/container"]
+
+rect/min_size = Vector2( 32, 32 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 32.0
+margin/bottom = 32.0
+script/script = ExtResource( 2 )
+item_scene = ExtResource( 3 )
+icon = ExtResource( 4 )
+
+[node name="icon" type="TextureFrame" parent="inventory_panel/container/item_1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 32.0
+margin/bottom = 32.0
+texture = ExtResource( 4 )
+stretch_mode = 3
+
+[node name="item_2" type="Panel" parent="inventory_panel/container"]
+
+rect/min_size = Vector2( 32, 32 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 48.0
+margin/top = 0.0
+margin/right = 80.0
+margin/bottom = 32.0
+script/script = ExtResource( 2 )
+item_scene = ExtResource( 5 )
+icon = ExtResource( 6 )
+
+[node name="icon" type="TextureFrame" parent="inventory_panel/container/item_2"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 32.0
+margin/bottom = 32.0
+texture = ExtResource( 6 )
+stretch_mode = 3
+
+

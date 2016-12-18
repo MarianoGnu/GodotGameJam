@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://scenes/items/wireless_sword/wireless_sword.gd" type="Script" id=1]
+[ext_resource path="res://scenes/items/wireless_sword/sword.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2, 10 )
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "attack"
+length = 0.25
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("sword/Sprite:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.25 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("sword:transform/rot")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.25 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ -44.9999, 45.0 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("sword/CollisionShape2D:trigger")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 0.25 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ false, true ] }
+
+[node name="wireless_sword" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="sword" type="Area2D" parent="."]
+
+transform/rot = 45.0
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -24 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sword"]
+
+transform/pos = Vector2( 0, -24 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Sprite" type="Sprite" parent="sword"]
+
+visibility/visible = false
+transform/pos = Vector2( 0, -24.0649 )
+texture = ExtResource( 2 )
+
+[node name="anim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/attack = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+
