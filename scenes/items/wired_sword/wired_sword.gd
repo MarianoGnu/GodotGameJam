@@ -15,3 +15,8 @@ func use():
 
 func release():
 	pass
+	
+
+func _on_sword_body_enter( body ):
+	if body.is_in_group("enemy"):
+		body.take_damage(1)

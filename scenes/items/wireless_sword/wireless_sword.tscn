@@ -70,4 +70,6 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
+[connection signal="body_enter" from="sword" to="." method="_on_sword_body_enter"]
+
 

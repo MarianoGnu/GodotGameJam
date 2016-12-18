@@ -15,6 +15,7 @@ onready var anim = get_node("anim")
 onready var item_container = get_node("item_container")
 
 func _init():
+	add_to_group("player")
 	Globals.set("player", self)
 
 func _ready():
@@ -68,6 +69,11 @@ func set_facing(new_dir):
 	else: # DOWN
 		item_container.set_rot(deg2rad(180))
 
-func _on_sword_body_enter( body ):
-	if body.is_in_group("enemy"):
-		body.take_damage(1)
+func take_damage(amount):
+	get_node("Sprite").set_modulate(Color(1,0,0,1))
+	var t = Timer.new()
+	add_child(t)
+	t.start()
+	yield(t,"timeout")
+	get_node("Sprite").set_modulate(Color(1,1,1,1))
+	t.queue_free()

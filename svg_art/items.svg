@@ -2,6 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -17,11 +18,31 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="items.svg"
-   inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/wired_sword/icon"
+   inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/bomb/icon"
    inkscape:export-xdpi="14.4"
    inkscape:export-ydpi="14.4">
   <defs
      id="defs4">
+    <pattern
+       inkscape:stockid="Wavy"
+       id="Wavy"
+       height="5.1805778"
+       width="30.066020"
+       patternUnits="userSpaceOnUse"
+       inkscape:collect="always">
+      <path
+         id="path5517"
+         d="M 7.597,0.061 C 5.079,-0.187 2.656,0.302 -0.01,1.788 L -0.01,3.061 C 2.773,1.431 5.173,1.052 7.472,1.280 C 9.770,1.508 11.969,2.361 14.253,3.218 C 18.820,4.931 23.804,6.676 30.066,3.061 L 30.062,1.788 C 23.622,5.497 19.246,3.770 14.691,2.061 C 12.413,1.207 10.115,0.311 7.597,0.061 z "
+         style="fill:black;stroke:none;" />
+    </pattern>
+    <linearGradient
+       id="linearGradient5627"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5629" />
+    </linearGradient>
     <linearGradient
        id="linearGradient4157"
        inkscape:collect="always">
@@ -76,9 +97,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="184.44993"
-     inkscape:cy="137.60268"
+     inkscape:zoom="1"
+     inkscape:cx="67.288817"
+     inkscape:cy="176.27479"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -202,5 +223,73 @@
        d="m 631.52219,301.73699 c -0.0196,0 -0.0367,0.0218 -0.0367,0.0469 l 0,19.97266 30.76451,-8.78516 0,-11.1875 c 0,-0.0251 -0.0155,-0.0469 -0.0351,-0.0469 l -30.69271,0 z m 30.72785,19.65039 -30.76451,8.78516 0,15.55078 30.76451,-8.78515 0,-15.55079 z m 0,23.9668 -30.76451,8.78516 0,14.95703 30.76451,-8.78516 0,-14.95703 z m 0,23.375 -30.76451,8.78516 0,8.92578 c 0,0.0251 0.0171,0.0449 0.0367,0.0449 l 30.69271,0 c 0.0196,0 0.0351,-0.0199 0.0351,-0.0449 l 0,-17.71094 z"
        id="rect4174"
        inkscape:connector-curvature="0" />
+    <rect
+       style="opacity:1;fill:#a05a2c;fill-opacity:1;fill-rule:nonzero;stroke:#a55b00;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.68333333"
+       id="rect5715"
+       width="210"
+       height="210"
+       x="-38.452751"
+       y="236.18108"
+       inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/cursor.png"
+       inkscape:export-xdpi="14.4"
+       inkscape:export-ydpi="14.4" />
+    <circle
+       style="opacity:1;fill:#3e316f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4153"
+       cx="368.4758"
+       cy="541.89532"
+       r="76.714287" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5711"
+       d="m 456.38618,434.1947 c 1,20 -4,28 -14,29.5 -10,1.5 -13,7.5 -14.5,10.5"
+       style="fill:none;fill-rule:evenodd;stroke:#a55b00;stroke-width:9.99999905;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.68333333" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:url(#Wavy);stroke-width:9.99999881;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stroke-dashoffset:0"
+       d="m 456.38618,434.1947 c 1,20 -4,28 -14,29.5 -10,1.5 -13,7.5 -14.5,10.5"
+       id="path4168"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="opacity:1;fill:#3e316f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4157"
+       width="37"
+       height="26"
+       x="610.40869"
+       y="103.10599"
+       transform="matrix(0.78729342,0.61657852,-0.61657852,0.78729342,0,0)"
+       inkscape:transform-center-y="-6.9999999" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:0.52083331;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:99.90000153;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 96.427734 49 A 66.714295 66.714295 0 0 0 29.714844 115.71484 A 66.714295 66.714295 0 0 0 33.634766 138.04297 A 74.714296 74.714296 0 0 1 32.714844 126.71484 A 74.714296 74.714296 0 0 1 107.42773 52 A 74.714296 74.714296 0 0 1 118.87305 52.976562 A 66.714295 66.714295 0 0 0 96.427734 49 z "
+       transform="translate(272.04724,426.18109)"
+       id="circle4161" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#ffb22c;fill-opacity:1;fill-rule:nonzero;stroke:#e7f000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.68333333"
+       id="path5717"
+       sodipodi:sides="5"
+       sodipodi:cx="361.54725"
+       sodipodi:cy="307.6811"
+       sodipodi:r1="24.005207"
+       sodipodi:r2="12.002604"
+       sodipodi:arg1="1.0471976"
+       sodipodi:arg2="1.6755161"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 373.54984,328.47021 -13.25721,-8.85227 -14.80801,5.9025 4.3223,-15.34387 -10.18953,-12.25928 15.92855,-0.63076 8.51053,-13.47914 5.52208,14.95403 15.44933,3.92871 -12.51571,9.87286 z"
+       inkscape:transform-center-x="-0.77542357"
+       inkscape:transform-center-y="-1.5422913"
+       inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/bomb/spark.png"
+       inkscape:export-xdpi="14.4"
+       inkscape:export-ydpi="14.4" />
+    <path
+       style="opacity:1;fill:#9f644c;fill-opacity:1;fill-rule:nonzero;stroke:#a47543;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.68333334"
+       d="M -221.5 88.697266 A 26.803249 27.303247 0 0 0 -248.25 114.92188 A 24.500003 24.500003 0 0 0 -261.5 111 A 24.500003 24.500003 0 0 0 -286 135.5 A 24.500003 24.500003 0 0 0 -261.5 160 A 24.500003 24.500003 0 0 0 -251.39258 157.78516 A 24.500003 24.500003 0 0 0 -227.5 177 A 24.500003 24.500003 0 0 0 -204.31445 160.3457 A 24.500003 24.500003 0 0 0 -191.5 164 A 24.500003 24.500003 0 0 0 -167 139.5 A 24.500003 24.500003 0 0 0 -191.5 115 A 24.500003 24.500003 0 0 0 -194.72266 115.24219 A 26.803249 27.303247 0 0 0 -221.5 88.697266 z "
+       transform="translate(272.04724,426.18109)"
+       id="path5719"
+       inkscape:export-filename="/media/mariano/Documentos/proyectos/zelda/scenes/items/bomb/explosion.png"
+       inkscape:export-xdpi="14"
+       inkscape:export-ydpi="14" />
   </g>
 </svg>
