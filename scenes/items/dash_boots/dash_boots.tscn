@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://scenes/items/dash_boots/dash_boots.gd" type="Script" id=1]
+[ext_resource path="res://scenes/items/bomb/explosion.png" type="Texture" id=2]
+
+[node name="dash_boots" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="particles" type="Particles2D" parent="."]
+
+transform/pos = Vector2( 0, 16 )
+config/amount = 8
+config/lifetime = 2.0
+config/emitting = false
+config/half_extents = Vector2( 8, 8 )
+config/local_space = false
+config/texture = ExtResource( 2 )
+params/direction = 0.0
+params/spread = 180.0
+params/linear_velocity = 4.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 0.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 0.5
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+
+

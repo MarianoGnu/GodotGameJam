@@ -5,7 +5,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 
-font/size = 32
+font/size = 16
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 2 )
@@ -33,23 +33,44 @@ margin/bottom = 8.0
 
 [node name="Label" type="Label" parent="btnB"]
 
-anchor/right = 1
+anchor/top = 1
 anchor/bottom = 1
+rect/rotation = -0.474932
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 0.0
-margin/right = 0.0
-margin/bottom = 0.0
+margin/top = 40.0
+margin/right = 16.0
+margin/bottom = 23.0
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = -1
+custom_constants/shadow_as_outline = 1
 text = "B"
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="textureB" type="TextureFrame" parent="btnB"]
+
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = 16.0
+margin/right = -16.0
+margin/bottom = -16.0
+stretch_mode = 0
 
 [node name="btnA" type="Control" parent="."]
 
@@ -63,27 +84,46 @@ margin/left = 80.0
 margin/top = 48.0
 margin/right = 120.0
 margin/bottom = 8.0
-__meta__ = { "_edit_group_":true }
 
 [node name="Label" type="Label" parent="btnA"]
 
-anchor/right = 1
+anchor/top = 1
 anchor/bottom = 1
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 0.0
-margin/right = 0.0
-margin/bottom = 0.0
+margin/top = 40.0
+margin/right = 16.0
+margin/bottom = 23.0
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_constants/shadow_as_outline = 1
 text = "A"
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="textureA" type="TextureFrame" parent="btnA"]
+
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = 16.0
+margin/right = -16.0
+margin/bottom = -16.0
+stretch_mode = 0
 
 [connection signal="draw" from="btnB" to="." method="_on_btnB_draw"]
 

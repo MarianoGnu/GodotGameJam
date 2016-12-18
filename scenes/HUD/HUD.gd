@@ -1,7 +1,11 @@
+tool
+
 extends CanvasLayer
 
 onready var btnA = get_node("btnA")
 onready var btnB = get_node("btnB")
+onready var textureA = get_node("btnA/textureA")
+onready var textureB = get_node("btnB/textureB")
 
 func _ready():
 	# Called every time the node is added to the scene.

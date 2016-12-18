@@ -8,9 +8,15 @@ const DOWN  = 3
 export(float) var WALK_SPEED = 150
 
 var dir = Vector2()
+var item_a
+var item_b
 
 onready var anim = get_node("anim")
-onready var sword_pivot = get_node("sword_pivot")
+onready var item_container = get_node("item_container")
+
+func _init():
+	add_to_group("player")
+	Globals.set("player", self)
 
 func _ready():
 	set_process_input(true)
@@ -39,8 +45,15 @@ func _input(event):
 		else: set_facing(UP)
 	dir.normalized()
 	
-	if event.is_action_pressed("A"):
-		anim.play("attack")
+	if item_a != null && event.is_action_pressed("A"):
+		item_a.use()
+	if item_a != null && event.is_action_released("A"):
+		item_a.release()
+	if item_b != null && event.is_action_pressed("B"):
+		item_b.use()
+	if item_b != null && event.is_action_released("B"):
+		item_b.release()
+		
 
 func _fixed_process(delta):
 	if anim.get_current_animation() != "attack":
@@ -48,14 +61,19 @@ func _fixed_process(delta):
 
 func set_facing(new_dir):
 	if new_dir == LEFT:
-		sword_pivot.set_rot(deg2rad(-90))
+		item_container.set_rot(deg2rad(-90))
 	elif new_dir == RIGHT:
-		sword_pivot.set_rot(deg2rad(90))
+		item_container.set_rot(deg2rad(90))
 	elif new_dir == UP:
-		sword_pivot.set_rot(deg2rad(0))
+		item_container.set_rot(deg2rad(0))
 	else: # DOWN
-		sword_pivot.set_rot(deg2rad(180))
+		item_container.set_rot(deg2rad(180))
 
-func _on_sword_body_enter( body ):
-	if body.is_in_group("enemy"):
-		body.take_damage(1)
+func take_damage(amount):
+	get_node("Sprite").set_modulate(Color(1,0,0,1))
+	var t = Timer.new()
+	add_child(t)
+	t.start()
+	yield(t,"timeout")
+	get_node("Sprite").set_modulate(Color(1,1,1,1))
+	t.queue_free()
