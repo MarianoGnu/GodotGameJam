@@ -153,4 +153,12 @@ extents = Vector2( 16, 16 )
 17/navigation_offset = Vector2( 16, 16 )
 17/shape_offset = Vector2( 0, 0 )
 17/shapes = [  ]
+18/name = "dark"
+18/texture = ExtResource( 1 )
+18/tex_offset = Vector2( 0, 0 )
+18/region = Rect2( 192, 0, 32, 32 )
+18/occluder_offset = Vector2( 16, 16 )
+18/navigation_offset = Vector2( 16, 16 )
+18/shape_offset = Vector2( 0, 0 )
+18/shapes = [  ]
 

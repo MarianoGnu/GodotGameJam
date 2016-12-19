@@ -399,4 +399,11 @@ texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 160, 32, 32, 32 )
 
+[node name="dark" type="Sprite" parent="."]
+
+transform/pos = Vector2( 208.582, 80 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 192, 0, 32, 32 )
+
 
