@@ -42,7 +42,7 @@ func interact():
 		empty = true
 	if empty:
 		var p = Globals.get("player")
-		anim.play("open")
+		MUSIC.start_play("got item")
 		p.set_fixed_process(false)
 		yield(anim,"finished")
 		icon.set_texture(null)
