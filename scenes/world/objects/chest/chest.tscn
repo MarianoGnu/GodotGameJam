@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://scenes/world/objects/chest/chest.gd" type="Script" id=1]
 [ext_resource path="res://scenes/items/bomb/explosion.png" type="Texture" id=2]
@@ -6,8 +6,7 @@
 [ext_resource path="res://scenes/items/bomb/icon.png" type="Texture" id=4]
 [ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lidless.png" type="Texture" id=5]
 [ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lid.png" type="Texture" id=6]
-[ext_resource path="res://audio/music/Got item.ogg" type="AudioStream" id=7]
-[ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lidopen.png" type="Texture" id=8]
+[ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lidopen.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -24,17 +23,12 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("lid:texture")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ ExtResource( 8 ) ] }
+tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ ExtResource( 7 ) ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("music:stream/play")
+tracks/1/path = NodePath("particles:config/emitting")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
-tracks/2/type = "value"
-tracks/2/path = NodePath("particles:config/emitting")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ true ] }
+tracks/1/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ true ] }
 
 [sub_resource type="ColorRamp" id=3]
 
@@ -73,17 +67,6 @@ texture = ExtResource( 5 )
 [node name="lid" type="Sprite" parent="."]
 
 texture = ExtResource( 6 )
-
-[node name="music" type="StreamPlayer" parent="."]
-
-stream/stream = ExtResource( 7 )
-stream/play = false
-stream/loop = false
-stream/volume_db = 0.0
-stream/autoplay = false
-stream/paused = false
-stream/loop_restart_time = 0.0
-stream/buffering_ms = 500
 
 [node name="anim" type="AnimationPlayer" parent="."]
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://scenes/singletons/music.gd" type="Script" id=1]
+[ext_resource path="res://scenes/singletons/MUSIC.gd" type="Script" id=1]
 
 [node name="StreamPlayer" type="StreamPlayer"]
 
 stream/stream = null
-stream/play = false
+stream/play = true
 stream/loop = false
 stream/volume_db = 0.0
 stream/autoplay = false
