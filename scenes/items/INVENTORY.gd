@@ -37,3 +37,6 @@ func _input(event):
 			get_node("panel/container").get_child(idx).equip(SLOT_A)
 		if event.is_action_pressed("B"):
 			get_node("panel/container").get_child(idx).equip(SLOT_B)
+
+func add_item(btn_instance):
+	get_node("panel/container").add_child(btn_instance)

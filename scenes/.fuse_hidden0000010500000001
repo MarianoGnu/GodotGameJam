@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/characters/glink/glink.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/world/objects/chest/chest.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/items/wireless_sword/btn_wireless_sword.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/items/wired_sword/btn_wired_sword.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/items/wired_sword/wired_sword.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/items/dash_boots/btn_dash_boots.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/items/bomb/btn_bomb.tscn" type="PackedScene" id=7]
 

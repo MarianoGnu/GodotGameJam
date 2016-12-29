@@ -1,16 +1,16 @@
 [gd_scene load_steps=9 format=1]
 
-[ext_resource path="res://scenes/glink/glink.gd" type="Script" id=1]
+[ext_resource path="res://scenes/characters/glink/glink.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16, 16 )
+extents = Vector2( 15.5, 15.5 )
 
 [sub_resource type="CanvasItemShader" id=2]
 
-_code = { "fragment":"uniform color mask = color(1,1,1,1);\nuniform float tolerance = 0.1;\ncolor c = tex(TEXTURE,UV);\nfloat dif = length(mask - c);\nif (dif > tolerance) {\n\tCOLOR = c;\n} else {\n\tCOLOR = color(c.rgb,0);\n}", "fragment_ofs":0, "light":"", "light_ofs":0, "vertex":"", "vertex_ofs":0 }
+_code = { "fragment":"uniform color mask = color(1,1,1,1);\nuniform float tolerance = 0.1;\ncolor c = tex(TEXTURE,UV);\nfloat dif = length(mask - c);\nif (dif > tolerance) {\n\tCOLOR = c * SRC_COLOR;\n} else {\n\tCOLOR = color(c.rgb,0);\n}", "fragment_ofs":0, "light":"", "light_ofs":0, "vertex":"", "vertex_ofs":0 }
 
 [sub_resource type="CanvasItemMaterial" id=3]
 
@@ -77,5 +77,12 @@ blend_times = [  ]
 autoplay = "idle"
 
 [node name="item_container" type="Node2D" parent="."]
+
+[node name="ray_interact" type="RayCast2D" parent="."]
+
+enabled = true
+cast_to = Vector2( 0, 20 )
+layer_mask = 1
+type_mask = 15
 
 

@@ -1,16 +1,7 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scenes/items/INVENTORY.gd" type="Script" id=1]
 [ext_resource path="res://scenes/items/cursor.png" type="Texture" id=2]
-[ext_resource path="res://scenes/items/item.gd" type="Script" id=3]
-[ext_resource path="res://scenes/items/wired_sword/wired_sword.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/items/wired_sword/icon.png" type="Texture" id=5]
-[ext_resource path="res://scenes/items/wireless_sword/wireless_sword.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/items/wireless_sword/icon.png" type="Texture" id=7]
-[ext_resource path="res://scenes/items/bomb/bomb.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/items/bomb/icon.png" type="Texture" id=9]
-[ext_resource path="res://scenes/items/dash_boots/dash_boots.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/items/dash_boots/icon.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -78,118 +69,5 @@ margin/right = 288.0
 margin/bottom = 48.0
 custom_constants/separation = 16
 alignment = 0
-
-[node name="item_1" type="Control" parent="panel/container"]
-
-visibility/self_opacity = 0.0
-rect/min_size = Vector2( 32, 32 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 32.0
-margin/bottom = 32.0
-script/script = ExtResource( 3 )
-item_scene = ExtResource( 4 )
-icon = ExtResource( 5 )
-
-[node name="icon" type="TextureFrame" parent="panel/container/item_1"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 32.0
-margin/bottom = 32.0
-texture = ExtResource( 5 )
-stretch_mode = 3
-
-[node name="item_2" type="Control" parent="panel/container"]
-
-rect/min_size = Vector2( 32, 32 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 48.0
-margin/top = 0.0
-margin/right = 80.0
-margin/bottom = 32.0
-script/script = ExtResource( 3 )
-item_scene = ExtResource( 6 )
-icon = ExtResource( 7 )
-
-[node name="icon" type="TextureFrame" parent="panel/container/item_2"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 32.0
-margin/bottom = 32.0
-texture = ExtResource( 7 )
-stretch_mode = 3
-
-[node name="item_3" type="Control" parent="panel/container"]
-
-rect/min_size = Vector2( 32, 32 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 96.0
-margin/top = 0.0
-margin/right = 128.0
-margin/bottom = 32.0
-script/script = ExtResource( 3 )
-item_scene = ExtResource( 8 )
-icon = ExtResource( 9 )
-
-[node name="icon" type="TextureFrame" parent="panel/container/item_3"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 32.0
-margin/bottom = 32.0
-texture = ExtResource( 9 )
-stretch_mode = 3
-
-[node name="item_4" type="Control" parent="panel/container"]
-
-rect/min_size = Vector2( 32, 32 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 144.0
-margin/top = 0.0
-margin/right = 176.0
-margin/bottom = 32.0
-script/script = ExtResource( 3 )
-item_scene = ExtResource( 10 )
-icon = ExtResource( 11 )
-
-[node name="icon" type="TextureFrame" parent="panel/container/item_4"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 32.0
-margin/bottom = 32.0
-texture = ExtResource( 11 )
-stretch_mode = 3
 
 
