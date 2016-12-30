@@ -1,64 +1,91 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://tilesets/dungeon.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/world/dungeon1/room1/room1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/characters/glink/glink.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/world/objects/chest/chest.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/items/wireless_sword/btn_wireless_sword.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/items/wired_sword/btn_wired_sword.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/items/dash_boots/btn_dash_boots.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/items/bomb/btn_bomb.tscn" type="PackedScene" id=7]
 
 [node name="test_level" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="room1" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( -1, 0 )
-mode = 0
-tile_set = ExtResource( 1 )
-cell/size = Vector2( 32, 32 )
-cell/quadrant_size = 16
-cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-cell/half_offset = 2
-cell/tile_origin = 0
-cell/y_sort = false
-collision/use_kinematic = false
-collision/friction = 1.0
-collision/bounce = 0.0
-collision/layers = 1
-collision/mask = 1
-occluder/light_mask = 1
-tile_data = IntArray( 0, 8, 1, 6, 2, 6, 3, 6, 4, 6, 5, 6, 6, 6, 7, 6, 8, 6, 9, 6, 10, 6, 11, 6, 12, 6, 13, 6, 14, 6, 15, 6, 16, 6, 17, 6, 18, 6, 19, 9, 65536, 4, 65537, 18, 65538, 18, 65539, 18, 65540, 18, 65541, 18, 65542, 18, 65543, 18, 65544, 18, 65545, 18, 65546, 18, 65547, 18, 65548, 18, 65549, 18, 65550, 18, 65551, 18, 65552, 18, 65553, 18, 65554, 18, 65555, 3, 131072, 4, 131073, 18, 131074, 18, 131075, 18, 131076, 18, 131077, 18, 131078, 18, 131079, 18, 131080, 18, 131081, 18, 131082, 18, 131083, 18, 131084, 18, 131085, 18, 131086, 18, 131087, 18, 131088, 18, 131089, 18, 131090, 18, 131091, 3, 196608, 4, 196609, 18, 196610, 18, 196611, 18, 196612, 18, 196613, 18, 196614, 18, 196615, 18, 196616, 18, 196617, 18, 196618, 18, 196619, 18, 196620, 18, 196621, 18, 196622, 18, 196623, 18, 196624, 18, 196625, 18, 196626, 18, 196627, 3, 262144, 4, 262145, 18, 262146, 18, 262147, 18, 262148, 0, 262149, 1, 262150, 1, 262151, 1, 262152, 1, 262153, 1, 262154, 1, 262155, 1, 262156, 2, 262157, 18, 262158, 18, 262159, 18, 262160, 18, 262161, 18, 262162, 18, 262163, 3, 327680, 4, 327681, 18, 327682, 18, 327683, 18, 327684, 3, 327685, 13, 327686, 13, 327687, 14, 327688, 14, 327689, 14, 327690, 13, 327691, 13, 327692, 4, 327693, 18, 327694, 18, 327695, 18, 327696, 18, 327697, 18, 327698, 18, 327699, 3, 393216, 4, 393217, 18, 393218, 18, 393219, 18, 393220, 3, 393221, 13, 393222, 13, 393223, 14, 393224, 14, 393225, 14, 393226, 13, 393227, 13, 393228, 4, 393229, 18, 393230, 18, 393231, 18, 393232, 18, 393233, 18, 393234, 18, 393235, 3, 458752, 11, 458753, 1, 458754, 1, 458755, 1, 458756, 10, 458757, 13, 458758, 13, 458759, 13, 458760, 13, 458761, 13, 458762, 13, 458763, 13, 458764, 11, 458765, 1, 458766, 1, 458767, 1, 458768, 1, 458769, 1, 458770, 1, 458771, 10, 524288, 14, 524289, 13, 524290, 13, 524291, 13, 524292, 14, 524293, 14, 524294, 13, 524295, 13, 524296, 13, 524297, 13, 524298, 13, 524299, 12, 524300, 13, 524301, 13, 524302, 13, 524303, 13, 524304, 12, 524305, 13, 524306, 13, 524307, 13, 589824, 14, 589825, 13, 589826, 13, 589827, 13, 589828, 13, 589829, 13, 589830, 13, 589831, 13, 589832, 13, 589833, 13, 589834, 13, 589835, 13, 589836, 12, 589837, 13, 589838, 13, 589839, 13, 589840, 13, 589841, 13, 589842, 13, 589843, 13, 655360, 8, 655361, 6, 655362, 6, 655363, 6, 655364, 9, 655365, 13, 655366, 13, 655367, 13, 655368, 13, 655369, 13, 655370, 13, 655371, 13, 655372, 8, 655373, 6, 655374, 6, 655375, 6, 655376, 6, 655377, 6, 655378, 6, 655379, 9, 720896, 4, 720897, 18, 720898, 18, 720899, 18, 720900, 3, 720901, 13, 720902, 13, 720903, 13, 720904, 13, 720905, 13, 720906, 13, 720907, 13, 720908, 4, 720909, 18, 720910, 18, 720911, 18, 720912, 18, 720913, 18, 720914, 18, 720915, 3, 786432, 4, 786433, 18, 786434, 18, 786435, 18, 786436, 3, 786437, 13, 786438, 13, 786439, 13, 786440, 13, 786441, 13, 786442, 13, 786443, 13, 786444, 4, 786445, 18, 786446, 18, 786447, 18, 786448, 18, 786449, 18, 786450, 18, 786451, 3, 851968, 4, 851969, 18, 851970, 18, 851971, 18, 851972, 5, 851973, 6, 851974, 6, 851975, 6, 851976, 6, 851977, 6, 851978, 6, 851979, 6, 851980, 7, 851981, 18, 851982, 18, 851983, 18, 851984, 18, 851985, 18, 851986, 18, 851987, 3, 917504, 4, 917505, 18, 917506, 18, 917507, 18, 917508, 18, 917509, 18, 917510, 18, 917511, 18, 917512, 18, 917513, 18, 917514, 18, 917515, 18, 917516, 18, 917517, 18, 917518, 18, 917519, 18, 917520, 18, 917521, 18, 917522, 18, 917523, 3 )
+current = false
+
+[node name="room5 4" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 0, 1472 )
+current = false
+
+[node name="room4 3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1728, 0 )
+current = false
+
+[node name="room44" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1728, 1472 )
+current = false
+
+[node name="room3 2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 0, 736 )
+current = false
+
+[node name="room34" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 0, 2208 )
+current = false
+
+[node name="room33" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1728, 736 )
+current = true
+
+[node name="room34 2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1728, 2208 )
+current = false
+
+[node name="room2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 864, 0 )
+current = false
+
+[node name="room5 2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 864, 1472 )
+current = false
+
+[node name="room4" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 2592, 0 )
+current = false
+
+[node name="room5" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 2592, 1472 )
+current = false
+
+[node name="room3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 864, 736 )
+current = false
+
+[node name="room5 3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 864, 2208 )
+current = false
+
+[node name="room4 2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 2592, 736 )
+current = false
+
+[node name="room43" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 2592, 2208 )
+current = false
 
 [node name="glink" parent="." instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 256, 256 )
-
-[node name="chests" type="Node2D" parent="."]
-
-__meta__ = { "_edit_lock_":true }
-
-[node name="chest" parent="chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 176, 176 )
-content_type = 3
-special_btn = ExtResource( 4 )
-
-[node name="chest1" parent="chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 368, 176 )
-content_type = 3
-special_btn = ExtResource( 5 )
-
-[node name="chest2" parent="chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 560, 272 )
-content_type = 3
-special_btn = ExtResource( 6 )
-
-[node name="chest3" parent="chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 48, 272 )
-content_type = 3
-special_btn = ExtResource( 7 )
+transform/pos = Vector2( 2080, 1104 )
 
 
