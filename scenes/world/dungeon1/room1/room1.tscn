@@ -27,6 +27,7 @@ angular_damp = 1.0
 collision/layers = 512
 collision/mask = 512
 script/script = ExtResource( 1 )
+current = null
 
 [node name="room_shape" type="CollisionPolygon2D" parent="."]
 
@@ -57,7 +58,6 @@ __meta__ = { "_edit_lock_":true }
 
 [node name="chests" type="Node2D" parent="TileMap"]
 
-editor/display_folded = true
 __meta__ = { "_edit_lock_":true }
 
 [node name="chest" parent="TileMap/chests" instance=ExtResource( 3 )]
