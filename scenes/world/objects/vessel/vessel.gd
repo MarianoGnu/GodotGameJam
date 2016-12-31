@@ -2,17 +2,20 @@ extends KinematicBody2D
 
 const PUSH_STRENGHT = 1
 const PICK_STRENGHT = 2
-const NEEDED_PUSH   = 0.5
+const NEEDED_PUSH   = 1
 
 export (float) var push_acum = 0
 var moving = false
 var last_dir = Vector2()
 
 onready var ray = get_node("ray")
+onready var shadow = get_node("shadow")
+onready var pick_anim = get_node("pick_anim")
 onready var tween = Tween.new()
 
 func _init():
 	add_to_group("pushable")
+	add_to_group("can_pickup")
 
 func _ready():
 	add_child(tween)
@@ -50,4 +53,10 @@ func translate(dir):
 	tween.interpolate_property(self,"transform/pos",get_pos(),get_pos()+dir,0.5,tween.TRANS_LINEAR,tween.EASE_IN_OUT)
 	tween.start()
 	yield(tween,"tween_complete")
+	push_acum = 0
 	moving = false
+
+
+
+func _on_shadow_draw():
+	shadow.draw_circle(Vector2(),32,Color(0,0,0,0.5))

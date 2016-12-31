@@ -1,12 +1,273 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://scenes/world/objects/vessel/vessel.gd" type="Script" id=1]
 [ext_resource path="res://scenes/world/objects/vessel/vessel.png" type="Texture" id=2]
+[ext_resource path="res://scenes/items/bomb/explosion.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "pick"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0, 0 ), Vector2( 0, -32 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:transform/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0, 0 ), Vector2( 0, -32 ) ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:collision/layers")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ 0 ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:collision/mask")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ 0 ] }
+
+[sub_resource type="Animation" id=6]
+
+resource/name = "throw_down"
+length = 0.6
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:transform/pos")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, -32 ), Vector2( 0, 108.853 ), Vector2( 0, 160 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:transform/pos")
+tracks/1/interp = 2
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, -32 ), Vector2( 0, 108.853 ), Vector2( 0, 160 ) ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:collision/layers")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:collision/mask")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("CollisionShape2D:trigger")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.4 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, true ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("particle:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0.4 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 0, 160 ) ] }
+tracks/6/type = "value"
+tracks/6/path = NodePath("particle:config/emitting")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.4 ), "transitions":FloatArray( 1 ), "update":1, "values":[ true ] }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite:transform/scale")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = { "times":FloatArray( 0, 0.4, 0.6 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ] }
+tracks/9/type = "value"
+tracks/9/path = NodePath("shadow:transform/pos")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, 8 ), Vector2( 0, 128 ), Vector2( 0, 170 ) ] }
+tracks/10/type = "value"
+tracks/10/path = NodePath("shadow:transform/scale")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = { "times":FloatArray( 0.4, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.4, 0.25 ), Vector2( 1e-05, 1e-05 ) ] }
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "throw_left"
+length = 0.6
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:transform/pos")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, -32 ), Vector2( -108.853, -20.7867 ), Vector2( -160, 0 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:transform/pos")
+tracks/1/interp = 2
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, -32 ), Vector2( -108.853, -20.7867 ), Vector2( -160, 0 ) ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:collision/layers")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:collision/mask")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("CollisionShape2D:trigger")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.4 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, true ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("particle:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0.4 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( -160, 0 ) ] }
+tracks/6/type = "value"
+tracks/6/path = NodePath("particle:config/emitting")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.4 ), "transitions":FloatArray( 1 ), "update":1, "values":[ true ] }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite:transform/scale")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = { "times":FloatArray( 0, 0.4, 0.6 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ] }
+tracks/9/type = "value"
+tracks/9/path = NodePath("shadow:transform/pos")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, 10 ), Vector2( -108.853, 10 ), Vector2( 180, 10 ) ] }
+tracks/10/type = "value"
+tracks/10/path = NodePath("shadow:visibility/self_opacity")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = { "times":FloatArray( 0, 0.4, 0.6 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ 1.0, 1.0, 0.0 ] }
+
+[sub_resource type="Animation" id=5]
+
+resource/name = "throw_right"
+length = 0.6
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:transform/pos")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, -32 ), Vector2( 108.853, -20.7867 ), Vector2( 160, 0 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:transform/pos")
+tracks/1/interp = 2
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, -32 ), Vector2( 108.853, -20.7867 ), Vector2( 160, 0 ) ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:collision/layers")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:collision/mask")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("CollisionShape2D:trigger")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.4 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, true ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("particle:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0.4 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 160, 0 ) ] }
+tracks/6/type = "value"
+tracks/6/path = NodePath("particle:config/emitting")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.4 ), "transitions":FloatArray( 1 ), "update":1, "values":[ true ] }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite:transform/scale")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = { "times":FloatArray( 0, 0.4, 0.6 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ] }
+
+[sub_resource type="Animation" id=7]
+
+resource/name = "throw_up"
+length = 0.6
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:transform/pos")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, -32 ), Vector2( 0, -108.853 ), Vector2( 0, -160 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:transform/pos")
+tracks/1/interp = 2
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, -32 ), Vector2( 0, -108.853 ), Vector2( 0, -160 ) ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:collision/layers")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:collision/mask")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("CollisionShape2D:trigger")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.4 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, true ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("particle:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0.4 ), "transitions":FloatArray( 1 ), "update":0, "values":[ Vector2( 0, -160 ) ] }
+tracks/6/type = "value"
+tracks/6/path = NodePath("particle:config/emitting")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0.4 ), "transitions":FloatArray( 1 ), "update":1, "values":[ true ] }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite:visibility/visible")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = { "times":FloatArray( 0, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
+tracks/8/type = "value"
+tracks/8/path = NodePath("Sprite:transform/scale")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = { "times":FloatArray( 0, 0.4, 0.6 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ] }
+
+[sub_resource type="ColorRamp" id=4]
+
+offsets = FloatArray( 0, 0.865497, 1 )
+colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
 
 [node name="vessel" type="KinematicBody2D"]
 
@@ -26,6 +287,11 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
+[node name="shadow" type="Node2D" parent="."]
+
+transform/pos = Vector2( 0, 10 )
+transform/scale = Vector2( 1e-05, 1e-05 )
+
 [node name="Sprite" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
@@ -36,5 +302,52 @@ enabled = true
 cast_to = Vector2( 0, 20 )
 layer_mask = 1
 type_mask = 15
+
+[node name="pick_anim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 0
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/pick = SubResource( 2 )
+anims/throw_down = SubResource( 6 )
+anims/throw_left = SubResource( 3 )
+anims/throw_right = SubResource( 5 )
+anims/throw_up = SubResource( 7 )
+next/throw_down = ""
+next/throw_right = ""
+next/throw_up = ""
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="particle" type="Particles2D" parent="."]
+
+transform/pos = Vector2( -160, 0 )
+config/amount = 32
+config/lifetime = 0.5
+config/emit_timeout = 0.5
+config/emitting = false
+config/half_extents = Vector2( 9, 9 )
+config/texture = ExtResource( 3 )
+params/direction = 0.0
+params/spread = 180.0
+params/linear_velocity = 40.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 0.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 0.3
+params/final_size = 0.8
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color_ramp = SubResource( 4 )
+
+[connection signal="draw" from="shadow" to="." method="_on_shadow_draw"]
 
 
