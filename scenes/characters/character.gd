@@ -8,6 +8,7 @@ const DOWN  = 3
 export(float) var WALK_SPEED = 150
 
 var dir = Vector2()
+var is_player = false
 var facing = DOWN setget set_facing,get_facing
 var can_take_damage = true
 
@@ -16,9 +17,11 @@ onready var item_container = get_node("item_container")
 
 func _ready():
 	set_fixed_process(true)
+	is_player = Globals.get("player") == self
 
 func _fixed_process(delta):
-	move(dir * WALK_SPEED * delta)
+	if !is_player:
+		move(dir * WALK_SPEED * delta)
 
 func set_facing(new_dir):
 	if new_dir == LEFT:

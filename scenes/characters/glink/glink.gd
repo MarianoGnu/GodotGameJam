@@ -46,6 +46,17 @@ func _input(event):
 	if item_b != null && event.is_action_released("B"):
 		item_b.release()
 
+func _fixed_process(delta):
+	# Override character's method to allow push objects
+	var mov = move(dir * WALK_SPEED * delta)
+	if ray_interact.is_colliding():
+		if ray_interact.get_collider().is_in_group("pushable"):
+			var dir_facing = ray_interact.get_cast_to()
+			if mov.x != 0 and dir_facing.x != 0:
+				ray_interact.get_collider().push(delta,1,dir_facing.normalized())
+			elif mov.y != 0 and dir_facing.y != 0:
+				ray_interact.get_collider().push(delta,1,dir_facing.normalized())
+
 func set_facing(new_dir):
 	if new_dir == UP:
 		ray_interact.set_cast_to(Vector2(0,-20))

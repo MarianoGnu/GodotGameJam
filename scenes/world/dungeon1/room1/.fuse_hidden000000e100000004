@@ -94,41 +94,33 @@ __meta__ = { "_edit_lock_":true }
 [node name="vessel" parent="TileMap/vessels" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 368, 176 )
-push_acum = 0
 
 [node name="vessel1" parent="TileMap/vessels" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 400, 176 )
-push_acum = 0
 
 [node name="vessel2" parent="TileMap/vessels" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 592, 336 )
-push_acum = 0
 
 [node name="vessel3" parent="TileMap/vessels" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 592, 368 )
-push_acum = 0
 
 [node name="vessel4" parent="TileMap/vessels" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 176, 336 )
-push_acum = 0
 
 [node name="vessel5" parent="TileMap/vessels" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 176, 368 )
-push_acum = 0
 
 [node name="vessel6" parent="TileMap/vessels" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 368, 656 )
-push_acum = 0
 
 [node name="vessel7" parent="TileMap/vessels" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 400, 656 )
-push_acum = 0
 
 

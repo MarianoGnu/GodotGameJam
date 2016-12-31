@@ -35,7 +35,12 @@ tracks/4/type = "value"
 tracks/4/path = NodePath("area:collision/mask")
 tracks/4/interp = 1
 tracks/4/imported = false
-tracks/4/keys = { "times":FloatArray( 0, 5.2 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 0, 1048575 ] }
+tracks/4/keys = { "times":FloatArray( 0, 5.2, 5.2, 5.5 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":1, "values":[ 0, 1048575, 1048063, 0 ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("area:collision/layers")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0, 5.2, 5.5 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ 0, 1048063, 0 ] }
 
 [sub_resource type="CircleShape2D" id=2]
 
@@ -48,7 +53,6 @@ script/script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/scale = Vector2( 1.1, 0.899999 )
 texture = ExtResource( 2 )
 
 [node name="Particles2D" type="Particles2D" parent="Sprite"]
@@ -125,7 +129,8 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-collision/mask = 1048575
+collision/layers = 0
+collision/mask = 0
 
 [node name="shape" type="CollisionShape2D" parent="area"]
 
