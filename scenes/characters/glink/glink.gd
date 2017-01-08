@@ -63,7 +63,7 @@ func _fixed_process(delta):
 		 mov = move(dir * WALK_SPEED * delta)
 	if state == STATE_NORMAL:
 		if ray_interact.is_colliding():
-			if ray_interact.get_collider().is_in_group("pushable"):
+			if ray_interact.get_collider() != null and ray_interact.get_collider() .is_in_group("pushable"):
 				var dir_facing = ray_interact.get_cast_to()
 				if mov.x != 0 and dir_facing.x != 0:
 					ray_interact.get_collider().push(delta,1,dir_facing.normalized())

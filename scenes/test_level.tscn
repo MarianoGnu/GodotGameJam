@@ -87,6 +87,5 @@ current = false
 [node name="glink" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2080, 1104 )
-max_health = 3
 
 

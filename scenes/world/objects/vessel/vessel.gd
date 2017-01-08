@@ -58,3 +58,10 @@ func translate(dir):
 
 func _on_shadow_draw():
 	shadow.draw_circle(Vector2(),32,Color(0,0,0,0.5))
+
+func connect_area():
+	get_node("collision/dmg_area").connect("body_enter",self,"make_dmg")
+
+func make_dmg(body):
+	if body.is_in_group("enemy"):
+		body.take_damage(1.5)
