@@ -36,7 +36,7 @@ tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ 0 ] }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 
 resource/name = "throw_down"
 length = 0.6
@@ -98,9 +98,8 @@ tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = { "times":FloatArray( 0.4, 0.6 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.4, 0.25 ), Vector2( 1e-05, 1e-05 ) ] }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=9]
 
-resource/name = "throw_left"
 length = 0.6
 loop = false
 step = 0.1
@@ -212,7 +211,7 @@ tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = { "times":FloatArray( 0, 0.4, 0.6 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ] }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 
 resource/name = "throw_up"
 length = 0.6
@@ -264,7 +263,7 @@ tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = { "times":FloatArray( 0, 0.4, 0.6 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ] }
 
-[sub_resource type="ColorRamp" id=4]
+[sub_resource type="ColorRamp" id=7]
 
 offsets = FloatArray( 0, 0.865497, 1 )
 colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
@@ -309,10 +308,10 @@ playback/process_mode = 0
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/pick = SubResource( 2 )
-anims/throw_down = SubResource( 6 )
-anims/throw_left = SubResource( 3 )
+anims/throw_down = SubResource( 8 )
+anims/throw_left = SubResource( 9 )
 anims/throw_right = SubResource( 5 )
-anims/throw_up = SubResource( 7 )
+anims/throw_up = SubResource( 6 )
 next/throw_down = ""
 next/throw_right = ""
 next/throw_up = ""
@@ -346,7 +345,7 @@ params/final_size = 0.8
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-color/color_ramp = SubResource( 4 )
+color/color_ramp = SubResource( 7 )
 
 [connection signal="draw" from="shadow" to="." method="_on_shadow_draw"]
 

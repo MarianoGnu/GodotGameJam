@@ -42,6 +42,7 @@ func throw():
 	pull_acum = 0
 	player.state = player.STATE_NORMAL
 
+
 func _fixed_process(delta):
 	if player.state == player.STATE_GRAB and not tween.is_active():
 		if pull_dir.x != 0:

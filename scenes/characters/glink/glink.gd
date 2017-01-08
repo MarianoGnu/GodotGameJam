@@ -34,8 +34,8 @@ func _input(event):
 		return
 	
 	if abs(dir.x) > abs(dir.y):
-		if dir.x > 0: set_facing(LEFT)
-		else: set_facing(RIGHT)
+		if dir.x > 0: set_facing(RIGHT)
+		else: set_facing(LEFT)
 	elif abs(dir.x) < abs(dir.y):
 		if dir.y > 0: set_facing(DOWN)
 		else: set_facing(UP)
@@ -76,11 +76,11 @@ func set_facing(new_dir):
 	elif new_dir == DOWN:
 		ray_interact.set_cast_to(Vector2(0,20))
 	elif new_dir == LEFT:
-		ray_interact.set_cast_to(Vector2(20,0))
-	elif new_dir == RIGHT:
 		ray_interact.set_cast_to(Vector2(-20,0))
+	elif new_dir == RIGHT:
+		ray_interact.set_cast_to(Vector2(20,0))
 	.set_facing(new_dir) # Call character.gd 's set_facing function
-	
+
 func interact():
 	if not ray_interact.is_colliding():
 		return false

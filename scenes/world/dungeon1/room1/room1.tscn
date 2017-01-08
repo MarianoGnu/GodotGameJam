@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://scenes/world/room.gd" type="Script" id=1]
 [ext_resource path="res://tilesets/dungeon.tres" type="TileSet" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/items/dash_boots/btn_dash_boots.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/items/bomb/btn_bomb.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/world/objects/vessel/vessel.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/characters/botctor/botctor.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -60,6 +61,7 @@ __meta__ = { "_edit_lock_":true }
 
 [node name="chests" type="Node2D" parent="TileMap"]
 
+editor/display_folded = true
 __meta__ = { "_edit_lock_":true }
 
 [node name="chest" parent="TileMap/chests" instance=ExtResource( 3 )]
@@ -94,6 +96,7 @@ special_btn = ExtResource( 8 )
 
 [node name="vessels" type="Node2D" parent="TileMap"]
 
+editor/display_folded = true
 transform/pos = Vector2( 1, 0 )
 __meta__ = { "_edit_lock_":true }
 
@@ -128,5 +131,11 @@ transform/pos = Vector2( 368, 656 )
 [node name="vessel7" parent="TileMap/vessels" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 400, 656 )
+
+[node name="enemies" type="Node2D" parent="TileMap"]
+
+[node name="botctor" parent="TileMap/enemies" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 401, 352 )
 
 

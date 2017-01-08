@@ -29,6 +29,16 @@ tracks/2/path = NodePath("sword/CollisionShape2D:trigger")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = { "times":FloatArray( 0, 0.25 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ false, true ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("sword:collision/layers")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 0.25 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("sword:collision/mask")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 0.25 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
 
 [node name="wireless_sword" type="Node2D"]
 
@@ -45,6 +55,8 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision/layers = 0
+collision/mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sword"]
 

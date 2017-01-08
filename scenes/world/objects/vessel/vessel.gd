@@ -56,7 +56,5 @@ func translate(dir):
 	push_acum = 0
 	moving = false
 
-
-
 func _on_shadow_draw():
 	shadow.draw_circle(Vector2(),32,Color(0,0,0,0.5))
