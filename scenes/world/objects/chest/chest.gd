@@ -34,6 +34,7 @@ func interact():
 		icon.set_texture(texture_key)
 		empty = true
 	elif content_type == BOMB:
+		
 		# TODO: add bombs
 		icon.set_texture(texture_bomb)
 		empty = true

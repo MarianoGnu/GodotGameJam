@@ -2,6 +2,9 @@ extends Node2D
 
 var player
 var walk_speed
+export (bool) var expendable = false
+export (int) var max_stock
+export (int) var current_stock
 
 onready var particles = get_node("particles")
 

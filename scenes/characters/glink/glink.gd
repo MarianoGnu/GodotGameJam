@@ -34,11 +34,25 @@ func _input(event):
 		if event.is_action_pressed("A"):
 			if not interact():
 				if item_a != null:
-					item_a.use()
+					if item_a.expendable:
+						if item_a.current_stock == 0:
+							return
+						else:
+							item_a.current_stock -=1
+							item_a.use()
+					else:
+						item_a.use()
 		if item_a != null && event.is_action_released("A"):
 			item_a.release()
 		if item_b != null && event.is_action_pressed("B"):
-			item_b.use()
+			if item_b.expendable:
+				if item_b.current_stock == 0:
+					return
+				else:
+					item_b.current_stock -=1
+					item_b.use()
+			else:
+				item_b.use()
 		if item_b != null && event.is_action_released("B"):
 			item_b.release()
 	elif state == STATE_HOLDING:

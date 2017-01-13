@@ -2,6 +2,10 @@ extends Node2D
 
 const NEEDED_PULL = 0.5
 
+export (bool) var expendable = false
+export (int) var max_stock
+export (int) var current_stock
+
 var player
 var object
 var ray_interact

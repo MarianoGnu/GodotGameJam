@@ -3,6 +3,10 @@ extends Node2D
 onready var anim = get_node("anim")
 var player
 
+export (bool) var expendable = false
+export (int) var max_stock
+export (int) var current_stock
+
 func use():
 	if anim.is_playing(): return
 	if player == null:
