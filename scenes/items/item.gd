@@ -34,7 +34,7 @@ func equip(slot):
 		player.item_b = instance
 		HUD.textureB.set_texture(icon)
 		if player.item_b.expendable:
-			HUD.update_value("b", player.item_a.current_stock)
+			HUD.update_value("b", player.item_b.current_stock)
 
 func unequip():
 	if player == null:
