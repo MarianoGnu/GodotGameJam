@@ -66,31 +66,35 @@ __meta__ = { "_edit_lock_":true }
 [node name="chest" parent="TileMap/chests" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 273, 208 )
-dialogs = StringArray( "You got something!" )
+dialogs = null
 content_type = 3
 special_btn = ExtResource( 4 )
 
 [node name="chest4" parent="TileMap/chests" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 273, 416 )
+dialogs = null
 content_type = 3
 special_btn = ExtResource( 5 )
 
 [node name="chest1" parent="TileMap/chests" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 497, 416 )
+dialogs = null
 content_type = 3
 special_btn = ExtResource( 6 )
 
 [node name="chest2" parent="TileMap/chests" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 305, 576 )
+dialogs = null
 content_type = 3
 special_btn = ExtResource( 7 )
 
 [node name="chest3" parent="TileMap/chests" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 513, 304 )
+dialogs = null
 content_type = 3
 special_btn = ExtResource( 8 )
 

@@ -28,9 +28,13 @@ func equip(slot):
 	if slot == INVENTORY.SLOT_A:
 		player.item_a = instance
 		HUD.textureA.set_texture(icon)
+		if player.item_a.expendable:
+			HUD.update_value("a", player.item_a.current_stock)
 	elif slot == INVENTORY.SLOT_B:
 		player.item_b = instance
 		HUD.textureB.set_texture(icon)
+		if player.item_b.expendable:
+			HUD.update_value("b", player.item_a.current_stock)
 
 func unequip():
 	if player == null:
@@ -40,8 +44,10 @@ func unequip():
 	instance.get_parent().remove_child(instance)
 	if current_slot == INVENTORY.SLOT_A:
 		player.item_a = null
+		HUD.update_value("a", -1)
 		HUD.textureA.set_texture(null)
 	elif current_slot == INVENTORY.SLOT_B:
 		player.item_b = null
+		HUD.update_value("b", -1)
 		HUD.textureB.set_texture(null)
 	current_slot = INVENTORY.SLOT_NONE

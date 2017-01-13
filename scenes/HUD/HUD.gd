@@ -6,6 +6,8 @@ onready var btnA = get_node("btnA")
 onready var btnB = get_node("btnB")
 onready var textureA = get_node("btnA/textureA")
 onready var textureB = get_node("btnB/textureB")
+onready var quantityA = get_node("btnA/quantity")
+onready var quantityB = get_node("btnB/quantity")
 
 func _ready():
 	print(get_property_list())
@@ -22,4 +24,13 @@ func show():
 func hide():
 	set_layer(-2)
 	pass
-		
+
+# Function to update the value in the HUD, give a negative value
+# to make the counter disappear
+func update_value(SLOT, NEW_VALUE):
+	SLOT = SLOT.to_upper()
+	if NEW_VALUE < 0: NEW_VALUE = "--"
+	if SLOT == "A":
+		quantityA.set_text(str(NEW_VALUE))
+	if SLOT == "B":
+		quantityA.set_text(str(NEW_VALUE))

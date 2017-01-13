@@ -39,6 +39,7 @@ func _input(event):
 							return
 						else:
 							item_a.current_stock -=1
+							HUD.update_value("a",item_a.current_stock) # Update the value on the hud
 							item_a.use()
 					else:
 						item_a.use()
@@ -50,6 +51,7 @@ func _input(event):
 					return
 				else:
 					item_b.current_stock -=1
+					HUD.update_value("b",item_b.current_stock)
 					item_b.use()
 			else:
 				item_b.use()

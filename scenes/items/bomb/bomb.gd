@@ -5,7 +5,6 @@ export (int) var max_stock = 10
 export (int) var current_stock = 10
 
 export(PackedScene) var bomb_scene
-
 var player
 
 func use():
@@ -14,7 +13,7 @@ func use():
 	var b = bomb_scene.instance()
 	player.get_parent().add_child(b)
 	b.set_global_pos(player.get_global_pos())
-
+#	HUD.update_value(
 func release():
 	pass
 	
