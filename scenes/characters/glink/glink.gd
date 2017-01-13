@@ -21,7 +21,7 @@ func _ready():
 func _input(event):
 	if anim.get_current_animation() == "attack":
 		return
-	
+
 	if abs(dir.x) > abs(dir.y):
 		if dir.x > 0: set_facing(RIGHT)
 		else: set_facing(LEFT)
@@ -29,7 +29,7 @@ func _input(event):
 		if dir.y > 0: set_facing(DOWN)
 		else: set_facing(UP)
 	dir.normalized()
-	
+
 	if state == STATE_NORMAL:
 		if event.is_action_pressed("A"):
 			if not interact():
@@ -39,7 +39,7 @@ func _input(event):
 							return
 						else:
 							item_a.current_stock -=1
-							HUD.update_value("a",item_a.current_stock) # Update the value on the hud
+							HUD.update_value(INVENTORY.SLOT_A, item_a.current_stock) # Update the value on the hud
 							item_a.use()
 					else:
 						item_a.use()
@@ -51,7 +51,7 @@ func _input(event):
 					return
 				else:
 					item_b.current_stock -=1
-					HUD.update_value("b",item_b.current_stock)
+					HUD.update_value(INVENTORY.SLOT_B,item_b.current_stock)
 					item_b.use()
 			else:
 				item_b.use()

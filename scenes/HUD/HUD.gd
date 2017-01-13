@@ -28,9 +28,8 @@ func hide():
 # Function to update the value in the HUD, give a negative value
 # to make the counter disappear
 func update_value(SLOT, NEW_VALUE):
-	SLOT = SLOT.to_upper()
 	if NEW_VALUE < 0: NEW_VALUE = "--"
-	if SLOT == "A":
+	if SLOT == 1:
 		quantityA.set_text(str(NEW_VALUE))
-	if SLOT == "B":
-		quantityA.set_text(str(NEW_VALUE))
+	if SLOT == 2:
+		quantityB.set_text(str(NEW_VALUE))
