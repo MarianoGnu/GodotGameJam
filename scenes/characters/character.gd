@@ -4,6 +4,7 @@ const RIGHT = 0
 const LEFT  = 1
 const UP    = 2
 const DOWN  = 3
+const die_particle_scene = preload("res://scenes/characters/die_particle.tscn")
 
 export(float) var WALK_SPEED = 150
 export(float) var max_health = 3
@@ -39,28 +40,35 @@ func set_facing(new_dir):
 func get_facing():
 	return facing
 
-func take_damage(amount):
+func take_damage(amount, from):
 	if not can_take_damage:
 		return
 	self.health -= amount
 	can_take_damage = false
 	get_node("Sprite").set_modulate(Color(0.8,0,0,1))
-	var t = Timer.new()
-	add_child(t)
-	t.start()
-	yield(t,"timeout")
+	var recoil = (get_global_pos()-from.get_global_pos()).normalized()
+	var remaining = 0.2
+	while remaining > 0:
+		remaining -= get_fixed_process_delta_time()
+		move(recoil * get_fixed_process_delta_time() * 270)
+		yield(get_tree(),"fixed_frame")
 	get_node("Sprite").set_modulate(Color(1,1,1,1))
-	t.queue_free()
-	can_take_damage = true
-
-func set_health(h):
-	h = clamp(h,0,max_health)
-	health = h
 	if health == 0:
+		var die = die_particle_scene.instance()
+		get_parent().add_child(die)
+		die.set_global_pos(get_global_pos())
+		set_process(false)
+		yield(die.get_node("anim"),"finished")
 		if is_in_group("player"):
 			get_tree().reload_current_scene()
 		else:
 			queue_free()
+	else:
+		can_take_damage = true
+
+func set_health(h):
+	h = clamp(h,0,max_health)
+	health = h
 
 func get_health():
 	return health;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://scenes/items/wireless_sword/wireless_sword.gd" type="Script" id=1]
 [ext_resource path="res://scenes/items/wireless_sword/sword.png" type="Texture" id=2]
@@ -40,6 +40,28 @@ tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = { "times":FloatArray( 0, 0.25 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 1, 0 ] }
 
+[sub_resource type="Animation" id=3]
+
+resource/name = "default"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sword/Sprite:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("sword:collision/layers")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ 0 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("sword:collision/mask")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ 0 ] }
+
 [node name="wireless_sword" type="Node2D"]
 
 script/script = ExtResource( 1 )
@@ -77,10 +99,12 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/attack = SubResource( 2 )
+anims/default = SubResource( 3 )
+next/attack = "default"
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
-autoplay = ""
+autoplay = "default"
 
 [connection signal="body_enter" from="sword" to="." method="_on_sword_body_enter"]
 

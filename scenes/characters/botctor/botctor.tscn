@@ -24,8 +24,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 WALK_SPEED = 50.0
@@ -33,6 +33,7 @@ max_health = 3
 
 [node name="hot_area" type="Area2D" parent="."]
 
+editor/display_folded = true
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -45,6 +46,23 @@ angular_damp = 1.0
 [node name="escape_area" type="CollisionShape2D" parent="hot_area"]
 
 shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="damage_area" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="collision" type="CollisionShape2D" parent="damage_area"]
+
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
@@ -97,6 +115,8 @@ blend_times = [  ]
 autoplay = ""
 
 [connection signal="body_exit" from="hot_area" to="." method="_on_hot_area_body_exit"]
+
+[connection signal="body_enter" from="damage_area" to="." method="_on_damage_area_body_enter"]
 
 [connection signal="body_enter" from="item_container/attack_trigger" to="." method="_on_attack_trigger_body_enter"]
 

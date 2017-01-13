@@ -64,4 +64,4 @@ func connect_area():
 
 func make_dmg(body):
 	if body.is_in_group("enemy"):
-		body.take_damage(1.5)
+		body.take_damage(1.5, self)

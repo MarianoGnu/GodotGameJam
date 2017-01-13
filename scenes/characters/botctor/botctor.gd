@@ -50,3 +50,8 @@ func _on_attack_trigger_body_enter( body ):
 	if body.is_in_group("player"):
 		set_state(STATE_ATTACK)
 		player = body
+
+
+func _on_damage_area_body_enter( body ):
+	if body.is_in_group("player"):
+		body.take_damage(1,self)
