@@ -6,6 +6,8 @@ const BOMB    = 2
 const SPECIAL = 3
 
 var empty = false
+export (bool) var interactible = false
+export (StringArray) var dialogs
 export (int,"Health,Key,Bomb,SPECIAL") var content_type = HEALTH
 export (PackedScene) var special_btn # what item will it add to inventory
 export (Texture) var texture_health
@@ -36,6 +38,8 @@ func interact():
 		icon.set_texture(texture_bomb)
 		empty = true
 	elif content_type == SPECIAL:
+		if INVENTORY.has_node("btn_wireless_sword"):
+			pass
 		var item = special_btn.instance()
 		INVENTORY.add_item(item)
 		icon.set_texture(item.icon)

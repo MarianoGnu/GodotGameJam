@@ -61,12 +61,12 @@ __meta__ = { "_edit_lock_":true }
 
 [node name="chests" type="Node2D" parent="TileMap"]
 
-editor/display_folded = true
 __meta__ = { "_edit_lock_":true }
 
 [node name="chest" parent="TileMap/chests" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 273, 208 )
+dialogs = StringArray( "You got something!" )
 content_type = 3
 special_btn = ExtResource( 4 )
 

@@ -6,7 +6,9 @@ export(Texture) var icon
 var instance
 var player
 var current_slot = 0
-
+export (bool) var expendable = true
+export (int) var max_stock
+export (int) var current_stock
 func _ready():
 	if instance == null:
 		instance = item_scene.instance()

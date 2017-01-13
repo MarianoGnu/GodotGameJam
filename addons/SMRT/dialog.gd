@@ -136,7 +136,7 @@ func show_text(chapter, dialog, start_at=0):
 	
 	
 	textObj.set_bbcode("")
-	if start_at == null:
+	if start_at == null:      
 		start_at = 0
 	var dialog_array
 	if language.has(chapter):

@@ -1,9 +1,13 @@
-[gd_resource type="DynamicFont" load_steps=2 format=1]
+[gd_resource type="DynamicFont" load_steps=3 format=1]
 
-[ext_resource path="res://addons/SMRT/font/zig_____.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/ArcadeClassic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://addons/SMRT/font/zig_____.ttf" type="DynamicFontData" id=2]
 
 [resource]
 
 font/size = 12
-font/font = ExtResource( 1 )
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+fallback/0 = ExtResource( 1 )
 
