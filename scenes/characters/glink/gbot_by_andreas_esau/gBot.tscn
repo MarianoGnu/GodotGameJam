@@ -1,0 +1,177 @@
+[gd_scene load_steps=15 format=1]
+
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_hip.png" type="Texture" id=1]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_body.png" type="Texture" id=2]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_arm_r.png" type="Texture" id=3]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_forearm_r.png" type="Texture" id=4]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_arm_l.png" type="Texture" id=5]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_forearm_l.png" type="Texture" id=6]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_head.png" type="Texture" id=7]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_jaw.png" type="Texture" id=8]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_leg_r.png" type="Texture" id=9]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_shin_r.png" type="Texture" id=10]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_foot_r.png" type="Texture" id=11]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_leg_l.png" type="Texture" id=12]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_shin_l.png" type="Texture" id=13]
+[ext_resource path="res://scenes/characters/glink/gbot_by_andreas_esau/gBot_foot_l.png" type="Texture" id=14]
+
+[node name="Sprite" type="Node2D"]
+
+[node name="hip" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.1, 0.06 )
+texture = ExtResource( 1 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="torso" type="Sprite" parent="hip"]
+
+transform/pos = Vector2( 8, -17 )
+texture = ExtResource( 2 )
+offset = Vector2( 4, -121 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="arm_r" type="Sprite" parent="hip/torso"]
+
+editor/display_folded = true
+transform/pos = Vector2( -97.9916, -162.508 )
+transform/rot = 2.96616
+z/z = 1
+texture = ExtResource( 3 )
+offset = Vector2( 12, 38 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="hand_r" type="Sprite" parent="hip/torso/arm_r"]
+
+transform/pos = Vector2( -10.7016, 118.403 )
+transform/rot = -0.576837
+texture = ExtResource( 4 )
+offset = Vector2( 14, 75 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="rigHand_r" type="Position2D" parent="hip/torso/arm_r/hand_r"]
+
+transform/pos = Vector2( -2.21619, 106.371 )
+transform/rot = -2.38933
+__meta__ = { "_edit_bone_":true }
+
+[node name="rig2" type="Position2D" parent="hip/torso/arm_r/hand_r/rigHand_r"]
+
+transform/pos = Vector2( -118.141, 169.806 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="arm_l" type="Sprite" parent="hip/torso"]
+
+editor/display_folded = true
+transform/pos = Vector2( 72.4031, -139.887 )
+z/z = -2
+texture = ExtResource( 5 )
+offset = Vector2( 12, 19 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="hand_l" type="Sprite" parent="hip/torso/arm_l"]
+
+transform/pos = Vector2( 4.258, 96.371 )
+texture = ExtResource( 6 )
+offset = Vector2( -18, 67 )
+flip_h = true
+__meta__ = { "_edit_bone_":true }
+
+[node name="rigHand_l" type="Position2D" parent="hip/torso/arm_l/hand_l"]
+
+transform/pos = Vector2( -6.64819, 88.6426 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="rig2" type="Position2D" parent="hip/torso/arm_l/hand_l/rigHand_l"]
+
+transform/pos = Vector2( 185.807, 59.3145 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="head" type="Sprite" parent="hip/torso"]
+
+editor/display_folded = true
+transform/pos = Vector2( 1.28247, -295.236 )
+transform/scale = Vector2( 0.8, 1 )
+texture = ExtResource( 7 )
+offset = Vector2( 17.7285, -109.695 )
+
+[node name="jaw" type="Sprite" parent="hip/torso/head"]
+
+transform/pos = Vector2( -103.047, 9.97229 )
+texture = ExtResource( 8 )
+offset = Vector2( 132.964, 18.8366 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="rigHead" type="Position2D" parent="hip/torso/head"]
+
+transform/pos = Vector2( 18.8366, -150.693 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="leg_r" type="Sprite" parent="hip"]
+
+transform/pos = Vector2( -40.5231, 27.4744 )
+transform/rot = -0.486361
+texture = ExtResource( 9 )
+offset = Vector2( -4.88708, 52.9429 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="shin_r" type="Sprite" parent="hip/leg_r"]
+
+transform/pos = Vector2( -17.1046, 100.999 )
+transform/rot = 0.963307
+texture = ExtResource( 10 )
+offset = Vector2( 17.1046, 45.6123 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="foot_r" type="Sprite" parent="hip/leg_r/shin_r"]
+
+transform/pos = Vector2( -15.4755, 105.071 )
+transform/rot = -0.476946
+texture = ExtResource( 11 )
+offset = Vector2( 47.2413, 24.4352 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="rigFoot_r" type="Position2D" parent="hip/leg_r/shin_r/foot_r"]
+
+transform/pos = Vector2( 83.9971, 36.695 )
+transform/rot = -138.366
+__meta__ = { "_edit_bone_":true }
+
+[node name="handler" type="Position2D" parent="hip/leg_r/shin_r/foot_r/rigFoot_r"]
+
+transform/pos = Vector2( 73.6038, -69.2644 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="leg_l" type="Sprite" parent="hip"]
+
+transform/pos = Vector2( 62.1047, 16.8858 )
+z/z = -2
+texture = ExtResource( 12 )
+offset = Vector2( -17.9192, 53.7574 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="shin_l" type="Sprite" parent="hip/leg_l"]
+
+transform/pos = Vector2( -30.1367, 98.5553 )
+texture = ExtResource( 13 )
+offset = Vector2( 19.5481, 49.6849 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="foot_l" type="Sprite" parent="hip/leg_l/shin_l"]
+
+transform/pos = Vector2( -11.4031, 104.257 )
+texture = ExtResource( 14 )
+offset = Vector2( 52.9429, 19.5482 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="rigFoot_l" type="Position2D" parent="hip/leg_l/shin_l/foot_l"]
+
+transform/pos = Vector2( 105.263, 34.3491 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="handler2" type="Position2D" parent="hip/leg_l/shin_l/foot_l/rigFoot_l"]
+
+transform/pos = Vector2( 2.03145, 97.5605 )
+transform/rot = -138.366
+__meta__ = { "_edit_bone_":true }
+
+
