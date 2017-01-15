@@ -5,7 +5,7 @@ const STATE_ATTACK  = 1
 
 var state = STATE_PATROLL setget set_state,get_state
 var player
-
+export var DAMAGE = 1
 onready var patroll_timer = get_node("patroll_timer")
 
 func _init():
@@ -54,4 +54,4 @@ func _on_attack_trigger_body_enter( body ):
 
 func _on_damage_area_body_enter( body ):
 	if body.is_in_group("player"):
-		body.take_damage(2,self)
+		body.take_damage(DAMAGE,self)

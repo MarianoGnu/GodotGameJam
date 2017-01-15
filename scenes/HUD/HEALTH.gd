@@ -37,7 +37,7 @@ func update_health(actor):
 			texture.set_region(Rect2((step*xOffset)+(step*4),step,step,step))
 			hearts[i].set_texture(texture)
 	if info[1] > 0:
-		var heart_steps = info[0]+info[1]-2
+		var heart_steps = info[0]
 		var texture = hearts[heart_steps].get_texture().duplicate()
 		texture.set_region(Rect2((step*xOffset)+(step*(actor.health%heart_value)),step,step,step))
 		hearts[heart_steps].set_texture(texture)
