@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scenes/HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://fonts/ArcadeClassic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/HUD/HEALTH.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -173,6 +174,8 @@ margin/top = 16.0
 margin/right = -16.0
 margin/bottom = -16.0
 stretch_mode = 0
+
+[node name="HEALTH" parent="." instance=ExtResource( 3 )]
 
 [connection signal="draw" from="btnB" to="." method="_on_btnB_draw"]
 

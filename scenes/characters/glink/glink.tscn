@@ -49,7 +49,7 @@ collision/mask = 513
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 WALK_SPEED = 150
-max_health = 3
+max_health = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 

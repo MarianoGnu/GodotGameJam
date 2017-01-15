@@ -54,4 +54,4 @@ func _on_attack_trigger_body_enter( body ):
 
 func _on_damage_area_body_enter( body ):
 	if body.is_in_group("player"):
-		body.take_damage(1,self)
+		body.take_damage(2,self)

@@ -23,4 +23,4 @@ func release():
 
 func _on_sword_body_enter( body ):
 	if body.is_in_group("enemy"):
-		body.take_damage(1, player)
+		body.take_damage(4, player)

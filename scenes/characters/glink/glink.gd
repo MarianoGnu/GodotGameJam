@@ -17,6 +17,7 @@ func _init():
 func _ready():
 	set_process_input(true)
 	ray_interact.add_exception(self)
+	HUD.generate_hearts(self)
 
 func _input(event):
 	if anim.get_current_animation() == "attack":
