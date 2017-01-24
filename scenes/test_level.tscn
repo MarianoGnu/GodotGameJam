@@ -1,95 +1,98 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
-[ext_resource path="res://scenes/world/dungeon1/room1/room1.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/world/objects/breakable_wall/BreakableWall.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/characters/glink/glink.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/test_level.gd" type="Script" id=1]
+[ext_resource path="res://scenes/world/dungeon1/room1/room1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/world/objects/breakable_wall/BreakableWall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/characters/glink/glink.tscn" type="PackedScene" id=4]
 
 [node name="test_level" type="Node2D"]
 
-[node name="room1" parent="." instance=ExtResource( 1 )]
+script/script = ExtResource( 1 )
+
+[node name="room1" parent="." instance=ExtResource( 2 )]
 
 current = false
 
-[node name="room5 4" parent="." instance=ExtResource( 1 )]
+[node name="room5 4" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 0, 1472 )
 current = false
 
-[node name="room4 3" parent="." instance=ExtResource( 1 )]
+[node name="room4 3" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1728, 0 )
 current = false
 
-[node name="room44" parent="." instance=ExtResource( 1 )]
+[node name="room44" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1728, 1472 )
 current = false
 
-[node name="room3 2" parent="." instance=ExtResource( 1 )]
+[node name="room3 2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 0, 736 )
 current = false
 
-[node name="room34" parent="." instance=ExtResource( 1 )]
+[node name="room34" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 0, 2208 )
 current = false
 
-[node name="room33" parent="." instance=ExtResource( 1 )]
+[node name="room33" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1728, 736 )
 current = true
 
-[node name="room34 2" parent="." instance=ExtResource( 1 )]
+[node name="room34 2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1728, 2208 )
 current = false
 
-[node name="room2" parent="." instance=ExtResource( 1 )]
+[node name="room2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 864, 0 )
 current = false
 
-[node name="room5 2" parent="." instance=ExtResource( 1 )]
+[node name="room5 2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 864, 1472 )
 current = false
 
-[node name="room4" parent="." instance=ExtResource( 1 )]
+[node name="room4" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2592, 0 )
 current = false
 
-[node name="room5" parent="." instance=ExtResource( 1 )]
+[node name="room5" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2592, 1472 )
 current = false
 
-[node name="room3" parent="." instance=ExtResource( 1 )]
+[node name="room3" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 864, 736 )
 current = false
 
-[node name="room5 3" parent="." instance=ExtResource( 1 )]
+[node name="room5 3" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 864, 2208 )
 current = false
 
-[node name="room4 2" parent="." instance=ExtResource( 1 )]
+[node name="room4 2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2592, 736 )
 current = false
 
-[node name="room43" parent="." instance=ExtResource( 1 )]
+[node name="room43" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 2592, 2208 )
 current = false
 
-[node name="BreakableWall" parent="." instance=ExtResource( 2 )]
+[node name="BreakableWall" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 2241, 944 )
 
-[node name="glink" parent="." instance=ExtResource( 3 )]
+[node name="glink" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2080, 1104 )
 max_health = 60
