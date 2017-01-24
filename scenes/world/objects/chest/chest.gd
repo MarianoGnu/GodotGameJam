@@ -34,25 +34,50 @@ func interact():
 		icon.set_texture(texture_key)
 		empty = true
 	elif content_type == BOMB:
-		
-		# TODO: add bombs
-		icon.set_texture(texture_bomb)
+		var p = Globals.get("player")
+		var boom = Globals.get("bomb")
+		if boom == null:
+			var item = special_btn.instance()
+			print(INVENTORY.get_item_list())
+			INVENTORY.add_item(item)
+			icon.set_texture(texture_bomb)
+			
+			# Play anim and music if the first time the item is got:
+			var p = Globals.get("player")
+			MUSIC.resume_dungeon_music(true)
+			MUSIC.start_play("got item")
+			anim.play("open")
+			DIALOG.show_text("item","bomb")
+			p.set_fixed_process(false)
+			yield(anim,"finished")
+			icon.set_texture(null)
+			p.set_fixed_process(true)
+		else:
+			boom.current_stock += 4
+#			UPDATE HUD VALUE IF ITEM IS EQUIPPED	
+			if p.item_a == boom:
+				HUD.update_value(1,boom.current_stock)
+			elif p.item_b == boom:
+				HUD.update_value(2, boom.current_stock)
+			anim.play("open")
 		empty = true
 	elif content_type == SPECIAL:
 		if INVENTORY.has_node("btn_wireless_sword"):
 			pass
 		var item = special_btn.instance()
-		INVENTORY.add_item(item)
-		icon.set_texture(item.icon)
+
 		empty = true
-	if empty:
-		var p = Globals.get("player")
-		MUSIC.start_play("got item")
-		anim.play("open")
-		p.set_fixed_process(false)
-		yield(anim,"finished")
-		icon.set_texture(null)
-		p.set_fixed_process(true)
+		if empty:
+			INVENTORY.add_item(item)
+			icon.set_texture(item.icon)
+			var p = Globals.get("player")
+			MUSIC.resume_dungeon_music(true)
+			MUSIC.start_play("got item")
+			anim.play("open")
+			p.set_fixed_process(false)
+			yield(anim,"finished")
+			icon.set_texture(null)
+			p.set_fixed_process(true)
 	else:
 		get_node("lid").set_texture(preload("res://scenes/world/objects/chest/sprite_by_hc/chest_lid.png"))
 	return true

@@ -18,6 +18,9 @@ margin/bottom = 32.0
 script/script = ExtResource( 1 )
 item_scene = ExtResource( 2 )
 icon = ExtResource( 3 )
+expendable = true
+max_stock = 20
+current_stock = 10
 
 [node name="icon" type="TextureFrame" parent="."]
 

@@ -3,12 +3,13 @@ extends Node
 export(PackedScene) var item_scene
 export(Texture) var icon
 
+
 var instance
 var player
 var current_slot = 0
 export (bool) var expendable = true
-export (int) var max_stock
-export (int) var current_stock
+export (int) var max_stock = 20
+export (int) var current_stock = 10
 func _ready():
 	if instance == null:
 		instance = item_scene.instance()
@@ -16,7 +17,7 @@ func _ready():
 
 func equip(slot):
 	if slot == INVENTORY.SLOT_NONE or slot == current_slot:
-		HUD.update_value(slot, -1)
+		HUD.update_value(slot, -1) # Setting the slot to -1 disables quantity display
 		unequip()
 		return
 	if player == null:
@@ -30,7 +31,7 @@ func equip(slot):
 	if slot == INVENTORY.SLOT_A:
 		player.item_a = instance
 		HUD.textureA.set_texture(icon)
-		if player.item_a.expendable:
+		if player.item_a.expendable: # if item can be counted
 			HUD.update_value(INVENTORY.SLOT_A, player.item_a.current_stock)
 	elif slot == INVENTORY.SLOT_B:
 		player.item_b = instance

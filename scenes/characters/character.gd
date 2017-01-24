@@ -7,7 +7,7 @@ const DOWN  = 3
 const die_particle_scene = preload("res://scenes/characters/die_particle.tscn")
 
 export(float) var WALK_SPEED = 150
-export(float) var max_health = 60
+export(int) var max_health = 60
 
 var dir = Vector2()
 var is_player = false

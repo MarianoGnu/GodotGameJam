@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scenes/world/dungeon1/room1/room1.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/characters/glink/glink.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/world/objects/breakable_wall/BreakableWall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/characters/glink/glink.tscn" type="PackedScene" id=3]
 
 [node name="test_level" type="Node2D"]
 
@@ -84,7 +85,11 @@ current = false
 transform/pos = Vector2( 2592, 2208 )
 current = false
 
-[node name="glink" parent="." instance=ExtResource( 2 )]
+[node name="BreakableWall" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 2241, 944 )
+
+[node name="glink" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 2080, 1104 )
 max_health = 60

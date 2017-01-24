@@ -30,6 +30,7 @@ collision/margin = 0.08
 script/script = ExtResource( 1 )
 WALK_SPEED = 50.0
 max_health = 3
+DAMAGE = 2
 
 [node name="hot_area" type="Area2D" parent="."]
 

@@ -95,7 +95,14 @@ special_btn = ExtResource( 7 )
 
 transform/pos = Vector2( 513, 304 )
 dialogs = null
-content_type = 3
+content_type = 2
+special_btn = ExtResource( 8 )
+
+[node name="chest5" parent="TileMap/chests" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 453, 304 )
+dialogs = null
+content_type = 2
 special_btn = ExtResource( 8 )
 
 [node name="vessels" type="Node2D" parent="TileMap"]
@@ -141,5 +148,6 @@ transform/pos = Vector2( 400, 656 )
 [node name="botctor" parent="TileMap/enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 401, 352 )
+DAMAGE = 2
 
 
