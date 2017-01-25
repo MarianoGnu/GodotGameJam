@@ -1,2 +1,3 @@
 Composed on the free tracker Deflemask
-Licensed under CC BY 
+
+Songs and SFX are licensed under CC-BY-4.0
