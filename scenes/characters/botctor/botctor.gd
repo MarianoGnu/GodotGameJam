@@ -5,7 +5,7 @@ const STATE_ATTACK  = 1
 
 var state = STATE_PATROLL setget set_state,get_state
 var player
-export var DAMAGE = 2
+export (int) var DAMAGE = CONST.DEFAULT_DAMAGE
 onready var patroll_timer = get_node("patroll_timer")
 
 func _init():

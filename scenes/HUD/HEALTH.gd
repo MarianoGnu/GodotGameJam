@@ -11,13 +11,13 @@ func _ready():
 
 func generate_hearts(actor):
 	hearts = []
-	print(actor)
 	for child in get_children():
 		child.queue_free()
 	var nhearts = (actor.max_health/4) # There already exists one heart when the scene starts
 	print("hearts: ",nhearts)
 	for i in range(nhearts):
-		hearts.append(heart.instance())
+		var heartI = heart.instance()
+		hearts.append(heartI)
 		add_child(hearts[hearts.size()-1])
 	update_health(actor)
 	pass
@@ -37,7 +37,7 @@ func update_health(actor):
 			texture.set_region(Rect2((step*xOffset)+(step*4),step,step,step))
 			hearts[i].set_texture(texture)
 	if info[1] > 0:
-		var heart_steps = info[0]
+		var heart_steps = info[0] - 1
 		var texture = hearts[heart_steps].get_texture().duplicate()
 		texture.set_region(Rect2((step*xOffset)+(step*(actor.health%heart_value)),step,step,step))
 		hearts[heart_steps].set_texture(texture)

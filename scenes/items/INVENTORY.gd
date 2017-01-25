@@ -8,11 +8,29 @@ onready var panel = get_node("panel")
 onready var cursor = get_node("panel/cursor")
 var idx = 0
 
+var heart_pieces = 0
 var off
 func _ready():
 	panel.hide()
 	off = panel.get_node("container").get_pos()
 	set_process_input(true)
+
+func add_heart_piece(value):
+	print("running function")
+	if heart_pieces+value >= 4:
+		heart_pieces+=value
+		heart_pieces-=4
+		var player = Globals.get("player")
+		player.max_health+=4
+		player.health = player.max_health
+		HUD.generate_hearts(player)
+		DIALOG.show_text("single_text","You completed a heart, now your max health is increased!")
+	else:
+		heart_pieces+=value
+		DIALOG.show_text("single_text",str("You got ",value," piece of heart. Get ",value-heart_pieces, "more to increase your max health."))
+		
+		
+	
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):

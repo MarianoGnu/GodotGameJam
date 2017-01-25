@@ -4,11 +4,12 @@ const HEALTH  = 0
 const KEY     = 1
 const BOMB    = 2
 const SPECIAL = 3
+const HEART_PIECE = 4
 
 var empty = false
 export (bool) var interactible = false
 export (StringArray) var dialogs
-export (int,"Health,Key,Bomb,SPECIAL") var content_type = HEALTH
+export (int,"Health,Key,Bomb,SPECIAL","Heart Piece") var content_type = HEALTH
 export (PackedScene) var special_btn # what item will it add to inventory
 export (Texture) var texture_health
 export (Texture) var texture_key
@@ -78,6 +79,18 @@ func interact():
 			yield(anim,"finished")
 			icon.set_texture(null)
 			p.set_fixed_process(true)
+	elif content_type == HEART_PIECE:
+		empty = true
+		var p = Globals.get("player")
+		MUSIC.resume_dungeon_music(true)
+		MUSIC.start_play("got item")
+		INVENTORY.add_heart_piece(5)
+		anim.play("open")
+		p.set_fixed_process(false)
+		yield(anim,"finished")
+		icon.set_texture(null)
+		p.set_fixed_process(true)
+		
 	else:
 		get_node("lid").set_texture(preload("res://scenes/world/objects/chest/sprite_by_hc/chest_lid.png"))
 	return true
