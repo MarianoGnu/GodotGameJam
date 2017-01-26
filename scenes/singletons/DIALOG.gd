@@ -13,5 +13,5 @@ func _ready():
 func show_text(chapter, dialog, start_at=0):
 	HUD.hide()
 	get_node("dialog").show_text(chapter,dialog, start_at)
-	yield(get_node("dialog"),"finished_dialog")
+	yield(get_node("dialog"),"finished")
 	HUD.show()

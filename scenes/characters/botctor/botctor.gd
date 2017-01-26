@@ -2,6 +2,8 @@ extends "res://scenes/characters/character.gd"
 
 const STATE_PATROLL = 0
 const STATE_ATTACK  = 1
+const STATE_RUN_TOWARDS = 2
+var DISTANCE_TRAVEL_LIMIT = 9000
 
 var state = STATE_PATROLL setget set_state,get_state
 var player
@@ -48,6 +50,7 @@ func _on_hot_area_body_exit( body ):
 
 func _on_attack_trigger_body_enter( body ):
 	if body.is_in_group("player"):
+
 		set_state(STATE_ATTACK)
 		player = body
 

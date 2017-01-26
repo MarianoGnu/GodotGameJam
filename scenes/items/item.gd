@@ -9,7 +9,7 @@ var player
 var current_slot = 0
 export (bool) var expendable = true
 export (int) var max_stock = 20
-export (int) var current_stock = 10
+export (int) var current_stock = 6
 func _ready():
 	if instance == null:
 		instance = item_scene.instance()

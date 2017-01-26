@@ -20,7 +20,7 @@ export var dialog_frame_height = 4
 #it defaults to this.
 var speed = float(.05)
 
-signal  finished_dialog
+signal  finished
 signal answer_selected
 signal dialog_control(information)
 #Global variable to change the position of the dialog on the viewport.
@@ -300,7 +300,7 @@ func show_text(chapter, dialog, start_at=0):
 	on_dialog = false
 # Emits a signal when all the dialogs are over.
 # Useful to know exactly when it is possible to free the resources it holds.
-	emit_signal("finished_dialog")
+	emit_signal("finished")
 	beep_pitch = 1.0
 	self.hide()
 	

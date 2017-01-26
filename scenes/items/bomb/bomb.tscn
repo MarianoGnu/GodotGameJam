@@ -9,6 +9,6 @@ script/script = ExtResource( 1 )
 bomb_scene = ExtResource( 2 )
 expendable = true
 max_stock = 20
-current_stock = 10
+current_stock = 6
 
 
