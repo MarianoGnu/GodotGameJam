@@ -5,8 +5,6 @@ var hearts = []
 var info = [0,0,0] # filled hearts, transition heart and empty hearts
 func _ready():
 	heart = preload("res://scenes/HUD/HEALTH_DISPLAY/heart.tscn")
-#	if Globals.get("player") != null:
-#		generate_hearts(Globals.get("player"))
 	pass
 
 func generate_hearts(actor):

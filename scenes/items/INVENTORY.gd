@@ -17,9 +17,9 @@ func _ready():
 
 func add_heart_piece(value):
 	print("running function")
-	if heart_pieces+value >= 4:
+	if heart_pieces+value >= CONST.HEART_PARTS_NEEDED:
 		heart_pieces+=value
-		heart_pieces-=4
+		heart_pieces-=CONST.HEART_PARTS_NEEDED
 		var player = Globals.get("player")
 		player.max_health+=4
 		player.health = player.max_health
@@ -27,7 +27,7 @@ func add_heart_piece(value):
 		DIALOG.show_text("single_text","You completed a heart, now your max health is increased!")
 	else:
 		heart_pieces+=value
-		DIALOG.show_text("single_text",str("You got ",value," piece of heart. Get ",value-heart_pieces, "more to increase your max health."))
+		DIALOG.show_text("single_text",str("You got ",value," piece of heart. Get ",CONST.HEART_PARTS_NEEDED-heart_pieces, " more to increase your max health."))
 		
 		
 	

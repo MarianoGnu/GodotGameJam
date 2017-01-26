@@ -69,6 +69,7 @@ transform/pos = Vector2( 273, 208 )
 dialogs = null
 content_type = 3
 special_btn = ExtResource( 4 )
+texture_show = null
 
 [node name="chest4" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -76,6 +77,7 @@ transform/pos = Vector2( 273, 416 )
 dialogs = null
 content_type = 3
 special_btn = ExtResource( 5 )
+texture_show = null
 
 [node name="chest1" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -83,6 +85,7 @@ transform/pos = Vector2( 497, 416 )
 dialogs = null
 content_type = 3
 special_btn = ExtResource( 6 )
+texture_show = null
 
 [node name="chest2" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -90,6 +93,7 @@ transform/pos = Vector2( 305, 576 )
 dialogs = null
 content_type = 3
 special_btn = ExtResource( 7 )
+texture_show = null
 
 [node name="chest3" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -97,6 +101,7 @@ transform/pos = Vector2( 513, 304 )
 dialogs = null
 content_type = 2
 special_btn = ExtResource( 8 )
+texture_show = null
 
 [node name="chest5" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -104,6 +109,7 @@ transform/pos = Vector2( 453, 304 )
 dialogs = null
 content_type = 2
 special_btn = ExtResource( 8 )
+texture_show = null
 
 [node name="vessels" type="Node2D" parent="TileMap"]
 
@@ -148,6 +154,5 @@ transform/pos = Vector2( 400, 656 )
 [node name="botctor" parent="TileMap/enemies" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 401, 352 )
-DAMAGE = 2
 
 

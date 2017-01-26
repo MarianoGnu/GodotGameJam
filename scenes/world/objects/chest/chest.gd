@@ -14,6 +14,7 @@ export (PackedScene) var special_btn # what item will it add to inventory
 export (Texture) var texture_health
 export (Texture) var texture_key
 export (Texture) var texture_bomb
+export (Texture) var texture_show
 onready var anim = get_node("anim")
 onready var icon = get_node("icon")
 
@@ -81,10 +82,11 @@ func interact():
 			p.set_fixed_process(true)
 	elif content_type == HEART_PIECE:
 		empty = true
+		icon.set_texture(texture_show)
 		var p = Globals.get("player")
 		MUSIC.resume_dungeon_music(true)
 		MUSIC.start_play("got item")
-		INVENTORY.add_heart_piece(5)
+		INVENTORY.add_heart_piece(2)
 		anim.play("open")
 		p.set_fixed_process(false)
 		yield(anim,"finished")
