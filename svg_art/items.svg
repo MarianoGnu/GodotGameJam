@@ -18,11 +18,27 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="items.svg"
-   inkscape:export-filename="/media/mariano/Documentos/proyectos/oracle_of_godot/scenes/items/crane_arm/icon.png"
+   inkscape:export-filename="/media/mariano/Documentos/proyectos/oracle_of_godot/scenes/world/objects/plug_socket/plug.png"
    inkscape:export-xdpi="14.4"
    inkscape:export-ydpi="14.4">
   <defs
      id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4204">
+      <stop
+         style="stop-color:#f4f9fc;stop-opacity:1"
+         offset="0"
+         id="stop4206" />
+      <stop
+         id="stop4212"
+         offset="0.46759263"
+         style="stop-color:#dcbe00;stop-opacity:0.52941176;" />
+      <stop
+         style="stop-color:#dbde00;stop-opacity:0;"
+         offset="1"
+         id="stop4208" />
+    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient5796">
@@ -184,6 +200,16 @@
        r="79.69596"
        gradientTransform="matrix(2.6149566,-0.83744934,0.87151035,2.7213132,-1587.2316,-365.43698)"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4204"
+       id="linearGradient4210"
+       x1="444.04724"
+       y1="625.68109"
+       x2="327.04724"
+       y2="455.68109"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.52585207,0,0,0.52585207,175.87956,249.75058)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -193,8 +219,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="19.642562"
-     inkscape:cy="133.12446"
+     inkscape:cx="68.311303"
+     inkscape:cy="82.610967"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -430,7 +456,7 @@
     </g>
     <g
        id="g4284"
-       transform="translate(-8.5714166,-0.79908605)">
+       transform="translate(201.42856,1.7009137)">
       <rect
          inkscape:transform-center-y="-0.62473046"
          inkscape:transform-center-x="5.9348668"
@@ -541,5 +567,41 @@
          d="m 368.8737,479.45824 c 0,7.8721 1.38845,17.5716 -18.21815,17.5716 -20.33022,0 -18.21816,-9.6995 -18.21816,-17.5716 0,-7.87211 8.15655,-10.9358 18.21816,-10.9358 10.06161,0 18.21815,3.06369 18.21815,10.9358 z"
          style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.88826656;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
+    <rect
+       style="opacity:1;fill:url(#linearGradient4210);fill-opacity:1;fill-rule:nonzero;stroke:#e99635;stroke-width:7.40820408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.60784314"
+       id="rect4202"
+       width="64.679802"
+       height="89.9207"
+       x="339.70731"
+       y="481.2207"
+       ry="0.52799755" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:14.0880003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.60784314"
+       id="rect4215"
+       width="8.9394855"
+       height="27.081381"
+       x="354.56262"
+       y="500.94016"
+       ry="0.52799755" />
+    <rect
+       ry="0.52799755"
+       y="500.94016"
+       x="379.54059"
+       height="27.081381"
+       width="8.9394855"
+       id="rect4217"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:14.0880003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.60784314" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:14.0880003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.60784314"
+       id="path4219"
+       sodipodi:type="arc"
+       sodipodi:cx="-371.52133"
+       sodipodi:cy="-550.3703"
+       sodipodi:rx="12.883375"
+       sodipodi:ry="12.883375"
+       sodipodi:start="0"
+       sodipodi:end="3.1415927"
+       d="m -358.63796,-550.3703 a 12.883375,12.883375 0 0 1 -6.44168,11.15733 12.883375,12.883375 0 0 1 -12.88338,0 12.883375,12.883375 0 0 1 -6.44169,-11.15733 l 12.88338,0 z"
+       transform="scale(-1,-1)" />
   </g>
 </svg>
