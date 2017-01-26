@@ -112,7 +112,6 @@ max_health = 60
 transform/pos = Vector2( 1984, 1036 )
 content_type = 4
 texture_health = null
-texture_bomb = null
 texture_show = SubResource( 1 )
 
 

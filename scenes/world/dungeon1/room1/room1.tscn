@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://scenes/world/room.gd" type="Script" id=1]
 [ext_resource path="res://tilesets/dungeon.tres" type="TileSet" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://scenes/items/wired_sword/btn_wired_sword.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/items/dash_boots/btn_dash_boots.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/items/bomb/btn_bomb.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/world/objects/vessel/vessel.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/characters/botctor/botctor.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/items/bomb/icon.png" type="Texture" id=9]
+[ext_resource path="res://scenes/world/objects/vessel/vessel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/characters/botctor/botctor.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -101,7 +102,7 @@ transform/pos = Vector2( 513, 304 )
 dialogs = null
 content_type = 2
 special_btn = ExtResource( 8 )
-texture_show = null
+texture_show = ExtResource( 9 )
 
 [node name="chest5" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -109,7 +110,7 @@ transform/pos = Vector2( 453, 304 )
 dialogs = null
 content_type = 2
 special_btn = ExtResource( 8 )
-texture_show = null
+texture_show = ExtResource( 9 )
 
 [node name="vessels" type="Node2D" parent="TileMap"]
 
@@ -117,41 +118,41 @@ editor/display_folded = true
 transform/pos = Vector2( 1, 0 )
 __meta__ = { "_edit_lock_":true }
 
-[node name="vessel" parent="TileMap/vessels" instance=ExtResource( 9 )]
+[node name="vessel" parent="TileMap/vessels" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 368, 176 )
 
-[node name="vessel1" parent="TileMap/vessels" instance=ExtResource( 9 )]
+[node name="vessel1" parent="TileMap/vessels" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 400, 176 )
 
-[node name="vessel2" parent="TileMap/vessels" instance=ExtResource( 9 )]
+[node name="vessel2" parent="TileMap/vessels" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 592, 336 )
 
-[node name="vessel3" parent="TileMap/vessels" instance=ExtResource( 9 )]
+[node name="vessel3" parent="TileMap/vessels" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 592, 368 )
 
-[node name="vessel4" parent="TileMap/vessels" instance=ExtResource( 9 )]
+[node name="vessel4" parent="TileMap/vessels" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 176, 336 )
 
-[node name="vessel5" parent="TileMap/vessels" instance=ExtResource( 9 )]
+[node name="vessel5" parent="TileMap/vessels" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 176, 368 )
 
-[node name="vessel6" parent="TileMap/vessels" instance=ExtResource( 9 )]
+[node name="vessel6" parent="TileMap/vessels" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 368, 656 )
 
-[node name="vessel7" parent="TileMap/vessels" instance=ExtResource( 9 )]
+[node name="vessel7" parent="TileMap/vessels" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 400, 656 )
 
 [node name="enemies" type="Node2D" parent="TileMap"]
 
-[node name="botctor" parent="TileMap/enemies" instance=ExtResource( 10 )]
+[node name="botctor" parent="TileMap/enemies" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 401, 352 )
 

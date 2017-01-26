@@ -13,7 +13,7 @@ export (int,"Health,Key,Bomb,SPECIAL","Heart Piece") var content_type = HEALTH
 export (PackedScene) var special_btn # what item will it add to inventory
 export (Texture) var texture_health
 export (Texture) var texture_key
-export (Texture) var texture_bomb
+
 export (Texture) var texture_show
 onready var anim = get_node("anim")
 onready var icon = get_node("icon")
@@ -42,7 +42,7 @@ func interact():
 			var item = special_btn.instance()
 			print(INVENTORY.get_item_list())
 			INVENTORY.add_item(item)
-			icon.set_texture(texture_bomb)
+			icon.set_texture(texture_show)
 			
 			# Play anim and music if the first time the item is got:
 			var p = Globals.get("player")
