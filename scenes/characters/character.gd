@@ -57,7 +57,7 @@ func take_damage(amount, from):
 		move(recoil * get_fixed_process_delta_time() * 270)
 		yield(get_tree(),"fixed_frame")
 	sprite.set_modulate(Color(1,1,1,1))
-	if health == 0:
+	if health <= 0:
 		var die = die_particle_scene.instance()
 		get_parent().add_child(die)
 		die.set_global_pos(get_global_pos())

@@ -72,6 +72,13 @@ func _fixed_process(delta):
 	# Override character's method to allow push objects
 	var mov = Vector2()
 	anim_tree.timescale_node_set_scale("speed",dir.length_squared())
+	if health <= 0:
+		item_a = null
+		item_b = null
+		HUD.reset_buttons()
+		if INVENTORY.get_node("panel/container").get_child_count() > 0:
+			for child in INVENTORY.get_node("panel/container").get_children():
+				child.queue_free()
 	if state != STATE_GRAB:
 		mov = move(dir * WALK_SPEED * delta)
 		if mov.length_squared() > 0 and state != STATE_HOLDING:

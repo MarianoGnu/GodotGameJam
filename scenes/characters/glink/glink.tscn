@@ -7,47 +7,46 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 15.5, 15.5 )
+extents = Vector2( 14, 14 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=2]
 
 atlas = ExtResource( 2 )
 region = Rect2( 0, 144, 231, 48 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=3]
 
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 231, 48 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=4]
 
 atlas = ExtResource( 2 )
 region = Rect2( 0, 96, 231, 48 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=5]
 
 atlas = ExtResource( 2 )
 region = Rect2( 0, 48, 231, 48 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=6]
 
 atlas = ExtResource( 2 )
 region = Rect2( 0, 96, 231, 48 )
 margin = Rect2( 0, 0, 0, 0 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=7]
 
 length = 0.25
 loop = false
 step = 0.05
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 
-resource/name = "carry"
 length = 0.4
 loop = true
 step = 0.1
@@ -57,9 +56,8 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 0.2 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ Rect2( 132, 0, 33, 48 ), Rect2( 165, 0, 33, 48 ) ] }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=9]
 
-resource/name = "pull"
 length = 0.4
 loop = false
 step = 0.1
@@ -69,9 +67,8 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ Rect2( 198, 0, 33, 48 ) ] }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=10]
 
-resource/name = "push"
 length = 0.4
 loop = true
 step = 0.1
@@ -81,7 +78,7 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 0.2 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ Rect2( 66, 0, 33, 48 ), Rect2( 99, 0, 33, 48 ) ] }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=11]
 
 length = 0.4
 loop = true
@@ -104,7 +101,7 @@ collision/margin = 0.08
 script/script = ExtResource( 1 )
 WALK_SPEED = 150
 max_health = 12
-facing_textures = [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ]
+facing_textures = [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
@@ -116,7 +113,7 @@ _update_shape_index = 0
 
 transform/pos = Vector2( 0, -16 )
 transform/scale = Vector2( 1.5, 1.5 )
-texture = SubResource( 2 )
+texture = SubResource( 6 )
 region = true
 region_rect = Rect2( 0, 0, 33, 48 )
 
@@ -125,11 +122,11 @@ region_rect = Rect2( 0, 0, 33, 48 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/attack = SubResource( 3 )
-anims/carry = SubResource( 6 )
-anims/pull = SubResource( 7 )
-anims/push = SubResource( 8 )
-anims/walk = SubResource( 5 )
+anims/attack = SubResource( 7 )
+anims/carry = SubResource( 8 )
+anims/pull = SubResource( 9 )
+anims/push = SubResource( 10 )
+anims/walk = SubResource( 11 )
 next/attack = "idle"
 next/carry = ""
 next/pull = ""
@@ -176,6 +173,6 @@ script/script = ExtResource( 3 )
 playback/process_mode = 1
 base_path = NodePath("..")
 master_player = NodePath("../anim")
-data = { "active":false, "connections":[ "state_3", "speed", 0, "speed", "out", 0, "state_1", "state_2", 0, "anim 3", "state_2", 1, "anim", "state_1", 0, "anim 4", "state_1", 1, "state_2", "state_3", 0, "anim 2", "state_3", 1 ], "master":NodePath("../anim"), "nodes":[ { "id":"speed", "pos":Vector2( 641, 123 ), "scale":1.0, "type":"timescale" }, { "filter":[  ], "from":"walk", "id":"anim", "pos":Vector2( 98, 5 ), "type":"animation" }, { "id":"out", "pos":Vector2( 790, 76 ), "type":"output" }, { "filter":[  ], "from":"pull", "id":"anim 2", "pos":Vector2( 83, 291 ), "type":"animation" }, { "blend":0.0, "filter":[  ], "id":"state_2", "pos":Vector2( 401, 89 ), "type":"blend2" }, { "filter":[  ], "from":"push", "id":"anim 3", "pos":Vector2( 89, 200 ), "type":"animation" }, { "filter":[  ], "from":"carry", "id":"anim 4", "pos":Vector2( 95, 101 ), "type":"animation" }, { "blend":0.0, "filter":[  ], "id":"state_1", "pos":Vector2( 258, 14 ), "type":"blend2" }, { "blend":0.0, "filter":[  ], "id":"state_3", "pos":Vector2( 519, 124 ), "type":"blend2" } ] }
+data = { "active":false, "connections":[ "state_3", "speed", 0, "speed", "out", 0, "anim", "state_1", 0, "anim 4", "state_1", 1, "state_2", "state_3", 0, "anim 2", "state_3", 1, "state_1", "state_2", 0, "anim 3", "state_2", 1 ], "master":NodePath("../anim"), "nodes":[ { "id":"speed", "pos":Vector2( 641, 123 ), "scale":1.0, "type":"timescale" }, { "filter":[  ], "from":"walk", "id":"anim", "pos":Vector2( 98, 5 ), "type":"animation" }, { "id":"out", "pos":Vector2( 790, 76 ), "type":"output" }, { "filter":[  ], "from":"push", "id":"anim 3", "pos":Vector2( 89, 200 ), "type":"animation" }, { "filter":[  ], "from":"carry", "id":"anim 4", "pos":Vector2( 95, 101 ), "type":"animation" }, { "blend":0.0, "filter":[  ], "id":"state_1", "pos":Vector2( 258, 14 ), "type":"blend2" }, { "blend":0.0, "filter":[  ], "id":"state_3", "pos":Vector2( 519, 124 ), "type":"blend2" }, { "filter":[  ], "from":"pull", "id":"anim 2", "pos":Vector2( 83, 291 ), "type":"animation" }, { "blend":0.0, "filter":[  ], "id":"state_2", "pos":Vector2( 401, 89 ), "type":"blend2" } ] }
 
 

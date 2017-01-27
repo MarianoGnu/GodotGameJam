@@ -40,3 +40,9 @@ func generate_hearts(actor):
 
 func update_health(actor):
 	get_node("HEALTH").update_health(actor)
+
+func reset_buttons():
+	btnA.get_node("textureA").set_texture(null)
+	update_value(1,-1)
+	btnB.get_node("textureB").set_texture(null)
+	update_value(2,-1)

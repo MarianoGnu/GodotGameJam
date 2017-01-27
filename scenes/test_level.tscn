@@ -2,14 +2,14 @@
 
 [ext_resource path="res://scenes/test_level.gd" type="Script" id=1]
 [ext_resource path="res://scenes/world/dungeon1/room1/room1.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/world/objects/breakable_wall/BreakableWall.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/characters/glink/glink.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/world/objects/chest/chest.tscn" type="PackedScene" id=5]
-[ext_resource path="res://svg_art/ui.png" type="Texture" id=6]
+[ext_resource path="res://scenes/world/objects/chest/chest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://svg_art/ui.png" type="Texture" id=4]
+[ext_resource path="res://scenes/world/objects/breakable_wall/BreakableWall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/characters/glink/glink.tscn" type="PackedScene" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
 
-atlas = ExtResource( 6 )
+atlas = ExtResource( 4 )
 region = Rect2( 192, 32, 32, 32 )
 margin = Rect2( 0, 0, 0, 0 )
 
@@ -96,21 +96,21 @@ current = false
 transform/pos = Vector2( 2592, 2208 )
 current = false
 
-[node name="BreakableWall" parent="." instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 2241, 944 )
-
-[node name="glink" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 2080, 1104 )
-
 [node name="chests" type="Node2D" parent="."]
 
-[node name="chest" parent="chests" instance=ExtResource( 5 )]
+[node name="chest" parent="chests" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1984, 1036 )
 content_type = 4
 texture_health = null
 texture_show = SubResource( 1 )
+
+[node name="BreakableWall" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 2241, 944 )
+
+[node name="glink" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 2080, 1104 )
 
 
