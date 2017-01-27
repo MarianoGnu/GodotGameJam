@@ -1,11 +1,13 @@
 extends KinematicBody2D
 
 func _init():
-	pass
+	add_to_group("cracked_wall")
 
 func _ready():
-	add_to_group("cracked_wall")
-	pass
+	set_fixed_process(true)
+
+func _fixed_process(delta):
+	move(Vector2())
 
 func destroy():
 	print("DESTROYING WALL")

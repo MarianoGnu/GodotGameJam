@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=1]
 
-[ext_resource path="res://addons/SMRT/Message_background.png" type="Texture" id=1]
+[ext_resource path="res://scenes/singletons/dialog_box.png" type="Texture" id=1]
 [ext_resource path="res://addons/SMRT/dialog.gd" type="Script" id=2]
 [ext_resource path="res://addons/SMRT/beep_letter.wav" type="Sample" id=3]
 [ext_resource path="res://addons/SMRT/font/main_font.tres" type="DynamicFont" id=4]
@@ -89,19 +89,19 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 116.0
-margin/right = 704.0
-margin/bottom = 420.0
+margin/right = -1.0
+margin/bottom = 300.0
 texture = ExtResource( 1 )
-patch_margin/left = 4
-patch_margin/top = 4
-patch_margin/right = 3
-patch_margin/bottom = 4
+patch_margin/left = 5
+patch_margin/top = 5
+patch_margin/right = 5
+patch_margin/bottom = 5
 script/script = ExtResource( 2 )
 __meta__ = { "__editor_plugin_screen__":"2D" }
-language = "res://addons/SMRT/example.lan"
+language = "res://scenes/singletons/dialog.lan"
 beep_WAV = ExtResource( 3 )
 font = ExtResource( 4 )
-font_size = 32
+font_size = 48
 face_sprites = ExtResource( 5 )
 next_dialog_texture = ExtResource( 6 )
 dialog_frame_height = 4
@@ -199,5 +199,3 @@ custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "ABRAKADABRA"
 visible_characters = -1
-
-

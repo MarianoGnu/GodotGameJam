@@ -70,7 +70,6 @@ transform/pos = Vector2( 273, 208 )
 dialogs = null
 content_type = 3
 special_btn = ExtResource( 4 )
-texture_show = null
 
 [node name="chest4" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -78,7 +77,6 @@ transform/pos = Vector2( 273, 416 )
 dialogs = null
 content_type = 3
 special_btn = ExtResource( 5 )
-texture_show = null
 
 [node name="chest1" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -86,7 +84,6 @@ transform/pos = Vector2( 497, 416 )
 dialogs = null
 content_type = 3
 special_btn = ExtResource( 6 )
-texture_show = null
 
 [node name="chest2" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -94,7 +91,6 @@ transform/pos = Vector2( 305, 576 )
 dialogs = null
 content_type = 3
 special_btn = ExtResource( 7 )
-texture_show = null
 
 [node name="chest3" parent="TileMap/chests" instance=ExtResource( 3 )]
 
@@ -114,7 +110,6 @@ texture_show = ExtResource( 9 )
 
 [node name="vessels" type="Node2D" parent="TileMap"]
 
-editor/display_folded = true
 transform/pos = Vector2( 1, 0 )
 __meta__ = { "_edit_lock_":true }
 

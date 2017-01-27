@@ -1,12 +1,11 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://scenes/world/objects/chest/chest.gd" type="Script" id=1]
 [ext_resource path="res://scenes/items/bomb/explosion.png" type="Texture" id=2]
 [ext_resource path="res://scenes/items/bomb/spark.png" type="Texture" id=3]
-[ext_resource path="res://scenes/items/bomb/icon.png" type="Texture" id=4]
-[ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lidless.png" type="Texture" id=5]
-[ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lid.png" type="Texture" id=6]
-[ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lidopen.png" type="Texture" id=7]
+[ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lidless.png" type="Texture" id=4]
+[ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lid.png" type="Texture" id=5]
+[ext_resource path="res://scenes/world/objects/chest/sprite_by_hc/chest_lidopen.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -23,7 +22,7 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("lid:texture")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ ExtResource( 7 ) ] }
+tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ ExtResource( 6 ) ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath("particles:config/emitting")
 tracks/1/interp = 1
@@ -41,8 +40,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 3
+collision/mask = 3
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -54,7 +53,7 @@ content_type = null
 special_btn = null
 texture_health = ExtResource( 2 )
 texture_key = ExtResource( 3 )
-texture_bomb = ExtResource( 4 )
+texture_show = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
@@ -64,11 +63,11 @@ _update_shape_index = 0
 
 [node name="armature" type="Sprite" parent="."]
 
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="lid" type="Sprite" parent="."]
 
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
 

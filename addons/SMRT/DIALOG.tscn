@@ -199,5 +199,3 @@ custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "ABRAKADABRA"
 visible_characters = -1
-
-

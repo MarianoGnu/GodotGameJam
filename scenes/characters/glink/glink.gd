@@ -3,12 +3,17 @@ extends "res://scenes/characters/character.gd"
 const STATE_NORMAL  = 0
 const STATE_GRAB    = 1
 const STATE_HOLDING = 2
+const STATE_PUSHING = 3
+const STATE_PULLING = 4
+
+export(Array) var facing_textures
 
 var item_a
 var item_b
-var state = STATE_NORMAL
+var state = STATE_NORMAL setget set_state,get_state
 
 onready var ray_interact = get_node("ray_interact")
+onready var anim_tree = get_node("anim_tree")
 
 func _init():
 	add_to_group("player")
@@ -18,6 +23,7 @@ func _ready():
 	set_process_input(true)
 	ray_interact.add_exception(self)
 	HUD.generate_hearts(self)
+	anim_tree.set_active(true)
 
 func _input(event):
 	if anim.get_current_animation() == "attack":
@@ -65,9 +71,14 @@ func _input(event):
 func _fixed_process(delta):
 	# Override character's method to allow push objects
 	var mov = Vector2()
+	anim_tree.timescale_node_set_scale("speed",dir.length_squared())
 	if state != STATE_GRAB:
-		 mov = move(dir * WALK_SPEED * delta)
-	if state == STATE_NORMAL:
+		mov = move(dir * WALK_SPEED * delta)
+		if mov.length_squared() > 0 and state != STATE_HOLDING:
+			self.state = STATE_PUSHING
+		elif state != STATE_HOLDING:
+			self.state = STATE_NORMAL
+	if state == STATE_NORMAL || state == STATE_PUSHING:
 		if ray_interact.is_colliding():
 			if ray_interact.get_collider() != null and ray_interact.get_collider() .is_in_group("pushable"):
 				var dir_facing = ray_interact.get_cast_to()
@@ -77,6 +88,7 @@ func _fixed_process(delta):
 					ray_interact.get_collider().push(delta,1,dir_facing.normalized())
 
 func set_facing(new_dir):
+	sprite.set_texture(facing_textures[new_dir])
 	if new_dir == UP:
 		ray_interact.set_cast_to(Vector2(0,-20))
 	elif new_dir == DOWN:
@@ -94,3 +106,21 @@ func interact():
 		return ray_interact.get_collider().interact()
 	else:
 		return false
+
+func set_state(s):
+	state = s
+	if s == STATE_NORMAL:
+		anim_tree.blend2_node_set_amount("state_1", 0)
+		anim_tree.blend2_node_set_amount("state_2", 0)
+		anim_tree.blend2_node_set_amount("state_3", 0)
+	elif s == STATE_GRAB || s == STATE_PUSHING:
+		anim_tree.blend2_node_set_amount("state_1", 0)
+		anim_tree.blend2_node_set_amount("state_2", 1)
+		anim_tree.blend2_node_set_amount("state_3", 0)
+	elif s == STATE_HOLDING:
+		anim_tree.blend2_node_set_amount("state_1", 1)
+		anim_tree.blend2_node_set_amount("state_2", 0)
+		anim_tree.blend2_node_set_amount("state_3", 0)
+
+func get_state():
+	return state
